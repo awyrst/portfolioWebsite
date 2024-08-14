@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website Home</title>
+    <link rel="stylesheet" href="radiation_shielding_styles.css" />
+    <script src="https://kit.fontawesome.com/6278deb041.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="name">
+                <img class="logo" src="../images/imageedit_6_3840461915.png">
+                <span><b>Alexander Wyrstiuk</b></span>
+            </div>
+            <i class="fa-solid fa-bars" id="btn"></i>
+        </div>
+        <ul>
+            <li>
+                <a href="../../../Home/index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="sidebar-item"><b>Home</b></span>
+                </a>
+                <span class="tooltip"><b>Home</b></span>
+            </li>
+            <li>
+                <a href="../../../About/about.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="sidebar-item"><b>About</b></span>
+                </a>
+                <span class="tooltip"><b>About</b></span>
+            </li>
+            <li>
+                <a href="../../../Work Experience/WkExp.html">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span class="sidebar-item"><b>Experience</b></span>
+                </a>
+                <span class="tooltip"><b>Experience</b></span>
+            </li>
+            <li>
+                <a href="../../../Projects/projects.html">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span class="sidebar-item"><b>Projects</b></span>
+
+                </a>
+                <span class="tooltip"><b>Projects</b></span>
+            </li>
+            <li>
+                <a href="https://github.com/awyrst">
+                    <i class="fa-brands fa-github"></i>
+                    <span class="sidebar-item"><b>Github</b></span>
+                </a>
+                <span class="tooltip"><b>Github</b></span>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/alexander-wyrstiuk-5b5256214/">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span class="sidebar-item"><b>Linkedin</b></span>
+                </a>
+                <span class="tooltip"><b>Linkedin</b></span>
+            </li>
+        </ul>
+    </div>
+
+    <div id="background"></div>
+
+    <div class="main">
+        <h1>Radiation Shielding Materials for a Moon Mission with Particular Constraints</h1>
+        <p id="dates">October 2023 - December 2023</p>
+        <img class="paper1" src="../images/paper1.png">
+        <img class="paper2" src="../images/paper2.png">
+        <img class="paper3" src="../images/paper3.png">
+    </div>
+
+    <div class="content">
+        <h2 class="section">Objectives</h2>
+        <div class="bar"></div>
+        <ul class="list">
+            <li>
+                <p class="item">Identify a specific and contextualized engineering problem</p>
+            </li>
+            <li>
+                <p class="item">Search for a set of contending solutions to said problem, based on academic literature
+                </p>
+            </li>
+            <li>
+                <p class="item">Produce and justify a set of criteria with which to compare the solutions</p>
+            </li>
+            <li>
+                <p class="item">Analyze and assess which solution best addresses the criteria</p>
+            </li>
+            <li>
+                <p class="item">Choose an engineering problem that is fun and requires you to dive into a relatively
+                    unfamiliar field</p>
+            </li>
+        </ul>
+        <h2 class="section">Methods/Features/Results</h2>
+        <div class="bar"></div>
+        <ul class="list">
+            <li>
+                <p class="item">Engineering Problem: space radiation could present additional risks for long moon
+                    missions scheduled during solar maxima.</p>
+            </li>
+            <li>
+                <p class="item">Possible Solutions: Aluminum, Liquid Hydrogen, Polyethylene.</p>
+            </li>
+            <li>
+                <p class="item">Criteria: Material Weight, and Shielding Effectiveness against Galactic Cosmic Radiation
+                    and Solar Particle Events.</p>
+            </li>
+            <li>
+                <p class="item">Winner: Liquid Hydrogen, acknowledging the limitations of the research.</p>
+            </li>
+            <li>
+                <p class="item">A well-justified set of criteria and solutions to a unique and interesting engineering
+                    problem.</p>
+            </li>
+            <li>
+                <p class="item">Earned an A in McGill's WCOM 206 course. <br><br><br></p>
+            </li>
+        </ul>
+        <a href="../images/ResearchPaperDraft3-compressed.pdf" download>
+            <h3>Click here to download a copy of the paper! <i class="fa-solid fa-copy"></i></h3>
+        </a>
+</body>
+
+<script>
+    // grabbing the options and sidebar html elements
+    let btn = document.querySelector('#btn');
+    let sidebar = document.querySelector('.sidebar');
+
+    // upon clicking the button, toggle the CSS property to activate the sidebar
+    btn.onclick = function () {
+        sidebar.classList.toggle('active');
+    };
+</script>
+
+</html>

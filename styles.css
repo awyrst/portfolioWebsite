@@ -1,0 +1,298 @@
+img.logo {
+    position: relative;
+    left: -7px;
+    top: 0;
+    width: 70px;
+    height: 70px;
+}
+
+.sidebar {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Courier;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: .4rem .8rem;
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+
+.sidebar.active {
+    width: 250px;
+    z-index: 1;
+    opacity: 1;
+
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: rgb(105, 240, 105);
+    top: 0px;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #btn {
+    left: 90%;
+}
+
+.sidebar .top .name {
+    color: rgb(105, 240, 105);
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.active .top .name {
+    opacity: 1;
+}
+
+.sidebar ul li {
+    position: relative;
+    right: 38px;
+    list-style-type: none;
+    height: 50px;
+    width: 50px;
+    margin: 0.8rem auto;
+    color: rgb(105, 240, 105);
+    line-height: 50px;
+}
+
+.sidebar ul li a {
+    color: rgb(105, 240, 105);
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+    vertical-align: center;
+    line-height: 50px;
+
+}
+
+.sidebar ul li a:hover {
+    background-color: rgb(105, 240, 105);
+    color: #02353c;
+}
+
+.sidebar.active ul li {
+    right: 80px;
+}
+
+.sidebar.active ul li a {
+    width: 160px;
+    padding: 2px;
+}
+
+.sidebar ul li a i {
+    position: relative;
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 2px;
+    vertical-align: center;
+    line-height: 42px;
+}
+
+.sidebar .sidebar-item {
+    opacity: 0;
+}
+
+.sidebar.active .sidebar-item {
+    opacity: 1;
+}
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    color: black;
+    background-color: rgb(105, 240, 105);
+    transform: translate(-20%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.3);
+    border-radius: 0.6rem;
+    padding: 0.4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+}
+
+.sidebar ul li:hover .tooltip {
+    opacity: 1;
+}
+
+.sidebar.active ul li .tooltip {
+    display: none;
+}
+
+.link {
+    color: yellow;
+}
+
+.link:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+button.nav {
+
+    background-color: transparent;
+    color: rgb(105, 240, 105);
+    border: 3px outset;
+    border-radius: 0.8rem;
+    border-color: rgb(105, 240, 105);
+    width: 130px;
+    height: 55px;
+    font-size: large;
+    margin-left: 30px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button.nav:hover {
+    background-color: rgb(105, 240, 105);
+    color: #02353c;
+    border-radius: 5px;
+    border-color: rgb(105, 240, 105);
+
+    font-size: large;
+
+}
+
+#projects {
+    position: absolute;
+    top: 430px;
+    left: 48%;
+
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#background {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#02353c, rgb(58, 138, 58));
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Ensure it stays behind the content */
+
+}
+
+#text {
+
+    position: absolute;
+    top: 170px;
+    left: 22%;
+    width: 650px;
+    height: 400px;
+
+    margin: 0 auto;
+
+}
+
+.big {
+    font-family: "Monospace";
+    color: #95AA15;
+}
+
+.text {
+    font-family: "Courier";
+    color: #10e492;
+}
+
+img.iss {
+    position: absolute;
+    top: 20px;
+    right: 20%;
+
+    height: 250px;
+    width: 333px;
+}
+
+img.radio0 {
+    position: absolute;
+    top: 200px;
+    right: 37%;
+    width: 66px;
+    height: 85px;
+    transform: rotate(-35deg);
+}
+
+img.radio1 {
+    position: absolute;
+    bottom: 350px;
+    left: 16%;
+    width: 66px;
+    height: 85px;
+    transform: rotate(-34deg);
+}
+
+img.radio2 {
+    position: absolute;
+    bottom: 380px;
+    right: 20%;
+    width: 66px;
+    height: 85px;
+    transform: rotate(-150deg);
+}
+
+img.mntn1 {
+    position: absolute;
+    bottom: 35px;
+    left: 6%;
+    width: 700px;
+    height: 250px;
+    transform: rotate(5deg);
+}
+
+img.mntn2 {
+    position: absolute;
+    bottom: 55px;
+    right: 50px;
+    width: 600px;
+    height: 150px;
+    transform: rotate(-8deg);
+}
+
+img.sat1 {
+    position: absolute;
+    bottom: 35px;
+    left: 5%;
+    height: 400px;
+    width: 266px;
+    transform: rotate(-7deg);
+
+}
+
+img.sat2 {
+    position: absolute;
+    bottom: 170px;
+    right: 45px;
+    height: 270px;
+    width: 245px;
+    transform: rotate(2deg);
+
+}

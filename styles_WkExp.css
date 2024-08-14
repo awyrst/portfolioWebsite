@@ -1,0 +1,338 @@
+img.logo {
+    position: relative;
+    left: -7px;
+    top: 0;
+    width: 70px;
+    height: 70px;
+}
+
+.sidebar {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Courier;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2000px;
+    width: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: .4rem .8rem;
+    transition-property: height;
+    transition-duration: 0ms;
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    opacity: 1;
+}
+
+.sidebar.extended {
+    height: 2300px;
+}
+
+.sidebar.active {
+    width: 250px;
+    z-index: 1;
+    opacity: 1;
+
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: rgb(105, 240, 105);
+    top: 0px;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #btn {
+    left: 90%;
+}
+
+.sidebar .top .name {
+    color: rgb(105, 240, 105);
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.active .top .name {
+    opacity: 1;
+}
+
+.sidebar ul li {
+    position: relative;
+    right: 38px;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem auto;
+    color: rgb(105, 240, 105);
+    line-height: 50px;
+}
+
+
+
+.sidebar ul li a {
+    color: rgb(105, 240, 105);
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+    vertical-align: center;
+    line-height: 50px;
+
+}
+
+.sidebar ul li a:hover {
+    background-color: rgb(105, 240, 105);
+    color: #02353c;
+}
+
+.sidebar.active ul li a {
+    width: 160px;
+    padding: 2px;
+}
+
+.sidebar ul li a i {
+    position: relative;
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 2px;
+    vertical-align: center;
+    line-height: 42px;
+}
+
+.sidebar .sidebar-item {
+    opacity: 0;
+}
+
+.sidebar.active .sidebar-item {
+    opacity: 1;
+}
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    color: black;
+    background-color: rgb(105, 240, 105);
+    transform: translate(-20%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.3);
+    border-radius: 0.6rem;
+    padding: 0.4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+}
+
+.sidebar ul li:hover .tooltip {
+    opacity: 1;
+}
+
+.sidebar.active ul li .tooltip {
+    display: none;
+}
+
+.link {
+    color: yellow;
+}
+
+.link:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+button.nav {
+
+    background-color: transparent;
+    color: rgb(105, 240, 105);
+    border: 3px outset;
+    border-radius: 0.8rem;
+    border-color: rgb(105, 240, 105);
+    width: 130px;
+    height: 55px;
+    font-size: large;
+    margin-left: 30px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button.nav:hover {
+    background-color: rgb(105, 240, 105);
+    color: #02353c;
+    border-radius: 5px;
+    border-color: rgb(105, 240, 105);
+
+    font-size: large;
+
+}
+
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#background {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2000px;
+    background: linear-gradient(to bottom, #02353c 0%, #02353c 60px, #02353c 60px, rgb(58, 138, 58) 100%);
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Ensure it stays behind the content */
+
+}
+
+#background.extended {
+    height: 2300px;
+}
+
+.resumetext {
+    position: absolute;
+    left: 200px;
+    top: 20px;
+    font-family: "Courier";
+    color: #10e492;
+
+
+}
+
+#resume {
+    position: absolute;
+    left: 550px;
+    top: 0px;
+}
+
+#projects {
+    position: absolute;
+    top: 75px;
+    left: 720px;
+
+}
+
+.projects {
+    position: absolute;
+    left: 200px;
+    top: 80px;
+    font-family: "Courier";
+    color: rgb(11, 232, 11);
+}
+
+#text {
+
+    position: absolute;
+    top: 130px;
+    left: 23%;
+    width: 925px;
+    height: 400px;
+
+    margin: 0 auto;
+
+}
+
+.read-more-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.read-more-btn {
+    font-family: "Monospace";
+    color: #95AA15;
+    cursor: pointer;
+}
+
+.read-more-text {
+    display: none;
+}
+
+.read-more-text--show {
+    display: inline;
+}
+
+.subexp {
+    font-family: "Monospace";
+    color: #95AA15;
+    text-indent: -50px;
+}
+
+.big {
+    font-family: "Courier";
+    color: rgb(11, 232, 11);
+
+}
+
+.preamble {
+    font-family: "Courier";
+    color: rgb(11, 232, 11);
+}
+
+.text {
+    font-family: "Courier";
+    color: #10e492;
+
+}
+
+
+.link {
+    color: yellow;
+}
+
+.link:hover {
+    color: orange;
+}
+
+.bar {
+    height: 3px;
+    width: 110%;
+    background-color: #95AA15;
+}
+
+#zerobar {
+    position: relative;
+    left: -50px;
+}
+
+#firstbar {
+    position: relative;
+    left: -50px;
+
+}
+
+.role {
+    font-family: "Courier";
+    color: #10e492;
+}
+
+#secondbar {
+    position: relative;
+    left: -50px;
+
+}
+
+
+
+#recent0 {
+    position: relative;
+    top: 77px;
+    font-size: medium;
+    color: #10e492;
+}

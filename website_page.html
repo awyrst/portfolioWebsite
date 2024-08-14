@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website Home</title>
+    <link rel="stylesheet" href="website_page_styles.css" />
+    <script src="https://kit.fontawesome.com/6278deb041.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="name">
+                <img class="logo" src="../images/imageedit_6_3840461915.png">
+                <span><b>Alexander Wyrstiuk</b></span>
+            </div>
+            <i class="fa-solid fa-bars" id="btn"></i>
+        </div>
+        <ul>
+            <li>
+                <a href="../../../Home/index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="sidebar-item"><b>Home</b></span>
+                </a>
+                <span class="tooltip"><b>Home</b></span>
+            </li>
+            <li>
+                <a href="../../../About/about.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="sidebar-item"><b>About</b></span>
+                </a>
+                <span class="tooltip"><b>About</b></span>
+            </li>
+            <li>
+                <a href="../../../Work Experience/WkExp.html">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span class="sidebar-item"><b>Experience</b></span>
+                </a>
+                <span class="tooltip"><b>Experience</b></span>
+            </li>
+            <li>
+                <a href="../../../Projects/projects.html">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span class="sidebar-item"><b>Projects</b></span>
+
+                </a>
+                <span class="tooltip"><b>Projects</b></span>
+            </li>
+            <li>
+                <a href="https://github.com/awyrst">
+                    <i class="fa-brands fa-github"></i>
+                    <span class="sidebar-item"><b>Github</b></span>
+                </a>
+                <span class="tooltip"><b>Github</b></span>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/alexander-wyrstiuk-5b5256214/">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span class="sidebar-item"><b>Linkedin</b></span>
+                </a>
+                <span class="tooltip"><b>Linkedin</b></span>
+            </li>
+        </ul>
+    </div>
+
+    <div id="background"></div>
+
+    <div class="main">
+        <h1>My Personal Website</h1>
+        <p id="dates">June 2024 - July 2024</p>
+        <img class="home" src="../images/home_page.png">
+        <img class="parker" src="../images/parker_page.png">
+        <img class="projects" src="../images/projects_page.png">
+    </div>
+
+    <div class="content">
+        <h2 class="section">Objectives</h2>
+        <div class="bar"></div>
+        <ul class="list">
+            <li>
+                <p class="item">Learn HTML, CSS and Javascript as necessary</p>
+            </li>
+            <li>
+                <p class="item">Develop a website that can serve as an engineering portfolio</p>
+            </li>
+            <li>
+                <p class="item">Ensure that the website can positively represent my abilities in frontend design</p>
+            </li>
+            <li>
+                <p class="item">Make sure that the website is aesthetically pleasing and easily navigable</p>
+            </li>
+            <li>
+                <p class="item">Ensure that the website accounts for different window sizes</p>
+            </li>
+            <li>
+                <p class="item">The structure of the website should allow for easy additions to the portfolio</p>
+            </li>
+        </ul>
+        <h2 class="section">Methods/Features/Results</h2>
+        <div class="bar"></div>
+        <ul class="list">
+            <li>
+                <p class="item">Radio communications and computer terminal aesthetic</p>
+            </li>
+            <li>
+                <p class="item">Smooth and sleek sidebar for navigation</p>
+            </li>
+            <li>
+                <p class="item">Four main webpages at the core of the website, each with a distinct purpose</p>
+            </li>
+            <li>
+                <p class="item">Portfolio divided into multiple categories, and allows for easy additions and expansions
+                </p>
+            </li>
+            <li>
+                <p class="item">Straightforward website structure, easy to traverse<br><br><br></p>
+            </li>
+        </ul>
+        <a href="https://github.com/awyrst/portfolioWebsite">
+            <h3>Check out my github repo to view the code for yourself! <i class="fa-brands fa-github"></i></h3>
+        </a>
+</body>
+
+<script>
+    // grabbing the options and sidebar html elements
+    let btn = document.querySelector('#btn');
+    let sidebar = document.querySelector('.sidebar');
+
+    // upon clicking the button, toggle the CSS property to activate the sidebar
+    btn.onclick = function () {
+        sidebar.classList.toggle('active');
+    };
+</script>
+
+</html>

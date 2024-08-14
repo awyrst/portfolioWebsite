@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website Home</title>
+    <link rel="stylesheet" href="styles_projects.css">
+    <script src="https://kit.fontawesome.com/6278deb041.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="name">
+                <img class="logo" src="images/imageedit_6_3840461915.png">
+                <span><b>Alexander Wyrstiuk</b></span>
+            </div>
+            <i class="fa-solid fa-bars" id="btn"></i>
+        </div>
+        <ul>
+            <li>
+                <a href="../Home/index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="sidebar-item"><b>Home</b></span>
+                </a>
+                <span class="tooltip"><b>Home</b></span>
+            </li>
+            <li>
+                <a href="../About/about.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="sidebar-item"><b>About</b></span>
+                </a>
+                <span class="tooltip"><b>About</b></span>
+            </li>
+            <li>
+                <a href="../Work Experience/WkExp.html">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span class="sidebar-item"><b>Experience</b></span>
+                </a>
+                <span class="tooltip"><b>Experience</b></span>
+            </li>
+            <li>
+                <a href="../Projects/projects.html">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span class="sidebar-item"><b>Projects</b></span>
+
+                </a>
+                <span class="tooltip"><b>Projects</b></span>
+            </li>
+            <li>
+                <a href="https://github.com/awyrst">
+                    <i class="fa-brands fa-github"></i>
+                    <span class="sidebar-item"><b>Github</b></span>
+                </a>
+                <span class="tooltip"><b>Github</b></span>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/alexander-wyrstiuk-5b5256214/">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span class="sidebar-item"><b>Linkedin</b></span>
+                </a>
+                <span class="tooltip"><b>Linkedin</b></span>
+            </li>
+        </ul>
+    </div>
+
+    <div id="background"></div>
+
+    <div class="trapezoid"></div>
+
+    <h1 class="header">Projects</h1>
+
+    <div class="slider">
+        <div class="list">
+            <div class="item">
+                <h2 class="subheader1"><i class="fa-solid fa-terminal"></i> Applications Programs</h2>
+                <p class="writing1">
+                    <b>Workout Log Program</b> <br> <br> This is a program written in C that allows you to create,
+                    store, and edit notes <br> about
+                    your workouts with a old-fashioned command-line user interface.
+                </p>
+                <img class="workout_program" src="images/workout_program.png">
+                <img class="programming" src="images/programming.png">
+                <a href="./Applications Programs/programs.html">
+                    <button id="see_more1" class="nav">See More <i class="fa-solid fa-plus"></i> </button>
+                </a>
+            </div>
+            <div class="item">
+                <h2 class="subheader2"><i class="fa-solid fa-object-group"></i> Frontend Designs</h2>
+                <p class="writing2"><b>My Portfolio Website</b> <br> <br> This very website is my very first venture
+                    into
+                    frontend
+                    development. Here, I try to optimize <br> the user experience while putting my knowledge and skills
+                    on
+                    display.</p>
+                <img class="home_page" src="images/home_page.png">
+                <img class="painting" src="images/painting.png">
+                <a href="./Frontend Designs/frontend.html">
+                    <button id="see_more2" class="nav">See More <i class="fa-solid fa-plus"></i> </button>
+                </a>
+            </div>
+            <div class="item">
+                <h2 class="subheader3"><i class="fa-solid fa-microchip"></i> Electronic Hardware Designs</h2>
+                <p class="writing3">
+                    <b>8-bit Minifloat Adder</b> <br> <br> Using VHDL, I
+                    create a digital design capable
+                    of adding two floating point numbers <br>
+                    represented
+                    in the
+                    8-bit minifloat format.
+                </p>
+                <img class="VHDL3_schematic" src="images/VHDL3_schematic.png">
+                <img class="electronics" src="images/electronics.png">
+                <a href="./Electronic Hardware Designs/ehds.html">
+                    <button id="see_more3" class="nav">See More <i class="fa-solid fa-plus"></i> </button>
+                </a>
+            </div>
+            <div class="item">
+                <h2 class="subheader4"><i class="fa-solid fa-copy"></i> Papers</h2>
+                <p class="writing4"><b>Radiation Shielding Research Paper</b> <br> <br>In this paper, I research the
+                    effectiveness of liquid hydrogen and polyethylene
+                    as radiation <br> shielding materials for conditions similar to those present in moon missions.
+                </p>
+                <img class="shielding_paper" src="images/shielding_paper.png">
+                <img class="typewriter" src="images/typewriter.png">
+                <a href="Papers/papers.html">
+                    <button id="see_more4" class="nav">See More <i class="fa-solid fa-plus"></i> </button>
+                </a>
+            </div>
+            <div class="item">
+                <h2 class="subheader5"><i class="fa-solid fa-brain"></i> AI-Powered Programs</h2>
+                <img class="ai" src="images/ai.png">
+                <h3 class="writing5"><b>Coming Soon!</b></h3>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="prev">&lt;</button>
+            <button id="next">></button>
+        </div>
+
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    let btn = document.querySelector('#btn');
+    let sidebar = document.querySelector('.sidebar');
+    let background = document.querySelector('#background');
+
+    btn.onclick = function () {
+        sidebar.classList.toggle('active');
+    };
+
+    let list = document.querySelector('.slider .list');
+    let items = document.querySelectorAll('.slider .list .item');
+    let dots = document.querySelectorAll('.slider .dots li');
+    let prev = document.getElementById('prev');
+    let next = document.getElementById('next');
+
+    let active = 0;
+    let lengthItems = items.length;
+    //stuff for 'next' button
+    next.onclick = function () {
+        if (active + 1 >= lengthItems) {
+            active = 0;
+        } else {
+            active = active + 1;
+        }
+        //manipulate the CSS properties of the background
+        let num = active.toString();
+        let result = "content" + num;
+        background.className = '';
+        background.classList.add(result);
+
+        reloadSlider();
+    }
+    //stuff for 'prev' button
+    prev.onclick = function () {
+        if (active - 1 < 0) {
+            active = lengthItems;
+        } else {
+            active = active - 1;
+        }
+        let num = active.toString();
+        let result = "content" + num;
+        background.className = '';
+        background.classList.add(result);
+        reloadSlider();
+    }
+
+    let refreshSlider = setInterval(() => { next.click() }, 10000);
+    //shift the items
+    function reloadSlider() {
+        let checkLeft = items[active].offsetLeft;
+        list.style.left = -checkLeft + 'px';
+
+        let lastActiveDot = document.querySelector('.slider .dots li.active');
+        lastActiveDot.classList.remove('active');
+        dots[active].classList.add('active');
+        clearInterval(refreshSlider);
+        refreshSlider = setInterval(() => { next.click() }, 10000);
+    }
+
+
+</script>
+
+</html>

@@ -1,0 +1,976 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+
+}
+
+/*images */
+img.myicon {
+    width: 100px;
+    height: 100px;
+
+}
+
+img.hill1 {
+    position: absolute;
+    top: 1025px;
+    right: 60px;
+    height: 300px;
+    width: 520px;
+    border-radius: 200px;
+    transform: rotate(-10deg);
+}
+
+img.hill2 {
+    position: absolute;
+    top: 1000px;
+    left: 110px;
+    height: 400px;
+    width: 720px;
+    border-radius: 500px;
+    transform: rotate(10deg);
+}
+
+img.radio_tower1 {
+    position: absolute;
+    top: 915px;
+    left: 255px;
+    height: 400px;
+    width: 240px;
+    transform: rotate(12deg);
+}
+
+img.radio_tower2 {
+    position: absolute;
+    top: 1000px;
+    right: 200px;
+    height: 300px;
+    width: 150px;
+    transform: scaleX(-1) rotate(10deg);
+}
+
+img.hill1.shift {
+    position: absolute;
+    top: 1525px;
+    right: 60px;
+}
+
+img.hill2.shift {
+    position: absolute;
+    top: 1500px;
+    left: 110px;
+}
+
+img.radio_tower1.shift {
+    position: absolute;
+    top: 1415px;
+    left: 255px;
+}
+
+img.radio_tower2.shift {
+    position: absolute;
+    top: 1500px;
+    right: 200px;
+}
+
+img.profile_pic {
+
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+}
+
+img.radio {
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    height: 350px;
+    width: 350px;
+}
+
+img.radio_wave {
+    position: absolute;
+    top: 20px;
+    right: 315px;
+    height: 90px;
+    width: 60px;
+    transform: rotate(260deg);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+img.radio_wave.visible {
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+/*preset bar*/
+
+.presetBar {
+    position: absolute;
+    top: 100px;
+    left: 120px;
+    height: 275px;
+    width: 350px;
+    background-color: rgb(61, 103, 127);
+    border: 5px outset rgb(97, 80, 135);
+    border-radius: 20px;
+    padding: 10px
+}
+
+#presetty {
+    font-family: Monospace;
+    color: #95AA15;
+    font-size: xx-large;
+}
+
+.options {
+    font-family: Courier;
+    color: rgb(105, 240, 105);
+}
+
+#changechannel {
+    position: absolute;
+    right: 35%;
+    top: 110px;
+    text-align: center;
+    font-family: Courier;
+    color: rgb(208, 180, 243);
+
+}
+
+/*preset dial*/
+
+.dial {
+    position: absolute;
+    top: 210px;
+    right: 38%;
+    height: 200px;
+    width: 200px;
+}
+
+.circle {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    height: 70px;
+    width: 70px;
+    border: 2px outset;
+    border-radius: 40px;
+    background-color: #02353c;
+}
+
+.smaller_circle {
+    position: relative;
+    top: 15px;
+    left: 15px;
+    height: 40px;
+    width: 40px;
+    border: 2px outset;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.needle_border {
+    position: relative;
+    left: 34px;
+    top: -75px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 40px solid white;
+}
+
+.needle {
+    position: relative;
+    right: 15px;
+    top: 3px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 40px solid black;
+}
+
+button.preset {
+
+    background-color: rgb(61, 103, 127);
+    color: rgb(105, 240, 105);
+    height: 30px;
+    width: 25px;
+    border: 2px outset;
+    border-radius: 0.8rem;
+    border-color: gray;
+    font-size: large;
+    cursor: pointer;
+}
+
+button.preset:hover {
+    background-color: rgb(105, 240, 105);
+    color: #02353c;
+}
+
+.shape {
+    position: relative;
+    top: 60px;
+    left: 44px;
+    height: 90px;
+    width: 90px;
+
+}
+
+#first {
+    position: relative;
+    left: 80px;
+    top: -80px;
+
+}
+
+#second {
+    position: relative;
+    left: 125px;
+    top: -20px;
+
+}
+
+#third {
+    position: relative;
+    left: 65px;
+    top: 65px;
+}
+
+#fourth {
+    position: relative;
+    left: -65px;
+    top: 65px;
+}
+
+#fifth {
+    position: relative;
+    left: -120px;
+    top: -20px;
+
+}
+
+.shape.one {
+    transform: rotate(0deg);
+}
+
+.shape.two {
+    transform: rotate(72deg);
+}
+
+.shape.three {
+    transform: rotate(144deg);
+}
+
+.shape.four {
+    transform: rotate(216deg);
+}
+
+.shape.five {
+    transform: rotate(288deg);
+}
+
+.header {
+    position: absolute;
+    font-family: monospace;
+    left: 550px;
+    top: 10px;
+    color: #95AA15;
+    font-size: xx-large;
+}
+
+/* Content of preset 1 */
+.presetNumOne {
+    position: absolute;
+    top: 450px;
+    left: 30%;
+    height: 450px;
+    width: 600px;
+    padding: 15px;
+    background-color: rgb(83, 134, 88);
+    border: 5px outset rgb(13, 71, 142);
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+.presetNumOne.invisible {
+    opacity: 0;
+}
+
+#name {
+    font-family: Monospace;
+    color: #95AA15;
+    font-size: xx-large;
+}
+
+#p1 {
+    position: relative;
+    top: -225px;
+    left: 215px;
+    width: 400px;
+    font-family: courier;
+    color: #38038e;
+}
+
+#p2 {
+    position: relative;
+    top: -230px;
+    left: 0;
+    height: 152px;
+    font-family: courier;
+    color: #38038e;
+}
+
+/* content preset 2 */
+.presetNumTwo {
+    opacity: 0;
+    position: absolute;
+    transition: all ease 0.5s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1025px;
+    height: 900px;
+    background-color: rgba(74, 53, 100, 0.717);
+    border: 4px solid rgb(63, 108, 132);
+    border-radius: 10px;
+    transform: rotate(-2deg);
+    z-index: -2;
+}
+
+.presetNumTwo.visible {
+    opacity: 1;
+    left: 15%;
+    top: 450px;
+    z-index: 1;
+}
+
+.cat {
+    position: relative;
+    top: 425px;
+    left: 500px;
+    height: 100px;
+    width: 133px;
+}
+
+.maxEqns {
+    position: relative;
+    top: -30px;
+    left: 315px;
+    height: 270px;
+    width: 380px;
+    transform: rotate(2deg);
+}
+
+.bandgap {
+    position: relative;
+    top: -20px;
+    left: 100px;
+    height: 180px;
+    width: 320px;
+}
+
+.blackhole1 {
+    position: relative;
+    top: 250px;
+    left: 640px;
+    height: 130px;
+    width: 130px;
+}
+
+.blackhole2 {
+    position: relative;
+    top: 400px;
+    right: -390px;
+    height: 160px;
+    width: 220px;
+}
+
+.heatEqn {
+    position: relative;
+    top: 130px;
+    left: 625px;
+    height: 70px;
+    width: 220px;
+
+}
+
+.waveEqn {
+    position: relative;
+    top: 300px;
+    left: 850px;
+    height: 70px;
+    width: 170px;
+
+}
+
+.furierTrnsfrm {
+    position: relative;
+    top: 250px;
+    right: 35px;
+    height: 70px;
+    width: 240px;
+    transform: rotate(-3deg);
+}
+
+#mathphysics {
+    position: relative;
+    left: 180px;
+    width: 450px;
+    font-size: x-large;
+    font-family: Monospace;
+    color: rgb(58, 162, 197);
+}
+
+#theinterest {
+    position: relative;
+    top: -460px;
+    left: 10px;
+    width: 600px;
+    font-size: medium;
+    font-family: Courier;
+    color: rgb(58, 162, 197);
+}
+
+#learned1 {
+    position: relative;
+    top: -425px;
+    left: 10px;
+    width: 600px;
+    font-size: medium;
+    font-family: Courier;
+    color: rgb(58, 162, 197);
+}
+
+
+
+/* content preset 3 */
+.presetNumThree {
+    opacity: 0;
+    transition: all ease 0.5s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1025px;
+    height: 900px;
+    background-color: rgba(96, 49, 64, 0.646);
+    border: 4px inset rgb(245, 148, 137);
+    border-radius: 10px;
+    z-index: -2;
+}
+
+.presetNumThree.visible {
+    opacity: 1;
+    left: 15%;
+    top: 450px;
+    z-index: 1;
+}
+
+.frontsquat {
+    position: relative;
+    top: 145px;
+    left: 65px;
+    height: 230px;
+    width: 180px;
+    border-radius: 30px;
+}
+
+.backsquat {
+    position: relative;
+    top: 40px;
+    left: 10px;
+    height: 270px;
+    width: 210px;
+    border-radius: 30px;
+}
+
+.doublesided {
+    position: relative;
+    left: -370px;
+    bottom: -560px;
+    height: 175px;
+    width: 430px;
+    border-radius: 10px;
+}
+
+.ohp {
+    position: absolute;
+    right: 590px;
+    bottom: 215px;
+    height: 200px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.incline {
+    position: relative;
+    right: 580px;
+    top: -100px;
+    height: 175px;
+    width: 135px;
+    border-radius: 10px;
+}
+
+.deadlift {
+    position: absolute;
+    right: 770px;
+    bottom: 210px;
+    height: 300px;
+    width: 240px;
+    border-radius: 10px;
+    transform: rotate(-7deg);
+}
+
+#fitnessstrength {
+    position: relative;
+    left: 300px;
+    top: -10px;
+    width: 450px;
+    font-size: x-large;
+    font-family: Monospace;
+    color: rgb(245, 148, 137);
+}
+
+#howitstarted {
+    position: relative;
+    top: -280px;
+    left: 500px;
+    width: 500px;
+    font-size: medium;
+    font-family: Courier;
+    color: rgb(245, 148, 137);
+}
+
+#thegrind {
+    position: relative;
+    top: -250px;
+    left: 500px;
+    width: 500px;
+    font-size: medium;
+    font-family: Courier;
+    color: rgb(245, 148, 137);
+}
+
+/* content preset 4 */
+
+.presetNumFour {
+    opacity: 0;
+    transition: all ease 0.5s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1025px;
+    height: 900px;
+    background-color: rgba(31, 88, 141, 0.282);
+    border: 4px inset rgb(137, 245, 202);
+    border-radius: 10px;
+    transform: rotate(2deg);
+    z-index: -2;
+}
+
+.presetNumFour.visible {
+    opacity: 1;
+    left: 15%;
+    top: 450px;
+    z-index: 1;
+}
+
+#compsciAI {
+    font-family: Monospace;
+    position: relative;
+    color: #badd7e;
+    left: 400px;
+    font-size: x-large;
+}
+
+#compsci {
+    font-family: courier;
+    position: relative;
+    color: #badd7e;
+    font-size: medium;
+    top: 15px;
+    left: 10px;
+    width: 500px;
+}
+
+#artInt {
+    font-family: courier;
+    position: relative;
+    color: #badd7e;
+    font-size: medium;
+    top: 0px;
+    left: 500px;
+    width: 500px;
+}
+
+.programming {
+    position: relative;
+    bottom: 780px;
+    left: 420px;
+    height: 200px;
+    width: 200px;
+}
+
+.xor {
+    position: relative;
+    bottom: 900px;
+    left: 400px;
+    height: 80px;
+    width: 160px;
+}
+
+.ai {
+    position: relative;
+    left: -520px;
+    bottom: 400px;
+    height: 150px;
+    width: 150px;
+}
+
+.cryptography {
+    position: relative;
+    bottom: 380px;
+    right: 420px;
+    height: 175px;
+    width: 175px;
+}
+
+.disk {
+    position: relative;
+    bottom: 380px;
+    left: 170px;
+    height: 150px;
+    width: 150px;
+}
+
+.transistor {
+    position: relative;
+    bottom: 750px;
+    left: 650px;
+    height: 150px;
+    width: 150px;
+}
+
+.neuralnet {
+    position: relative;
+    bottom: 650px;
+    left: 550px;
+    height: 175px;
+    width: 175px;
+}
+
+/* content preset 5 */
+
+.presetNumFive {
+    opacity: 0;
+    transition: all ease 0.5s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1025px;
+    height: 900px;
+    background-color: rgba(26, 124, 125, 0.622);
+    border: 4px inset rgba(54, 64, 100, 0.991);
+    border-radius: 10px;
+    z-index: -2;
+}
+
+.presetNumFive.visible {
+    opacity: 1;
+    left: 15%;
+    top: 450px;
+    z-index: 1;
+}
+
+.parker1 {
+    position: relative;
+    top: 80px;
+    left: 30px;
+    width: 320px;
+    height: 400px;
+    border-radius: 20px;
+}
+
+.parker2 {
+    position: relative;
+    right: 240px;
+    top: 400px;
+    width: 420px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+.parker3 {
+    position: relative;
+    left: 540px;
+    top: -60px;
+    width: 400px;
+    height: 310px;
+    border-radius: 20px;
+}
+
+.parker4 {
+    position: relative;
+    left: -30px;
+    top: -400px;
+    width: 300px;
+    height: 450px;
+    border-radius: 20px;
+}
+
+.parker5 {
+    position: relative;
+    left: -10px;
+    top: -420px;
+    width: 300px;
+    height: 380px;
+    border-radius: 20px;
+}
+
+#HiParker {
+    position: relative;
+    left: 50px;
+    font-family: monospace;
+    font-size: xx-large;
+    Color: rgba(54, 64, 100, 0.991);
+
+}
+
+/* Sidebar */
+
+img.logo {
+    position: relative;
+    left: -7px;
+    top: 0;
+    width: 70px;
+    height: 70px;
+}
+
+.sidebar {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Courier;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1500px;
+    width: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: .4rem .8rem;
+    transition: all 0.5s ease;
+    opacity: 1;
+    z-index: 1;
+}
+
+.sidebar.long {
+    height: 2000px;
+}
+
+.sidebar.active {
+    width: 250px;
+    z-index: 1;
+    opacity: 1;
+
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: rgb(105, 240, 105);
+    top: 0px;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #btn {
+    left: 90%;
+}
+
+.sidebar .top .name {
+    color: rgb(105, 240, 105);
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.active .top .name {
+    opacity: 1;
+}
+
+.sidebar ul li {
+    position: relative;
+    right: 38px;
+    list-style-type: none;
+    height: 50px;
+    width: 50px;
+    margin: 0.8rem auto;
+    color: rgb(105, 240, 105);
+    line-height: 50px;
+}
+
+.sidebar ul li a {
+    color: rgb(105, 240, 105);
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+    vertical-align: center;
+    line-height: 50px;
+
+}
+
+.sidebar ul li a:hover {
+    background-color: rgb(105, 240, 105);
+    color: #02353c;
+}
+
+.sidebar.active ul li {
+    right: 80px;
+}
+
+.sidebar.active ul li a {
+    width: 160px;
+    padding: 2px;
+}
+
+.sidebar ul li a i {
+    position: relative;
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 2px;
+    vertical-align: center;
+    line-height: 42px;
+}
+
+.sidebar .sidebar-item {
+    opacity: 0;
+}
+
+.sidebar.active .sidebar-item {
+    opacity: 1;
+}
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 125px;
+    top: 50%;
+    color: black;
+    background-color: rgb(105, 240, 105);
+    transform: translate(-20%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.3);
+    border-radius: 0.6rem;
+    padding: 0.4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+}
+
+.sidebar ul li:hover .tooltip {
+    opacity: 1;
+}
+
+.sidebar.active ul li .tooltip {
+    display: none;
+}
+
+.link {
+    color: yellow;
+}
+
+.link:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+
+button.nav {
+
+    background-color: transparent;
+    color: rgb(105, 240, 105);
+    border: 3px outset;
+    border-radius: 0.8rem;
+    border-color: rgb(105, 240, 105);
+    width: 130px;
+    height: 55px;
+    font-size: large;
+    margin-left: 30px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button.nav:hover {
+    background-color: rgb(105, 240, 105);
+    color: #02353c;
+    border-radius: 5px;
+    border-color: rgb(105, 240, 105);
+
+    font-size: large;
+
+}
+
+#background {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2440px;
+    min-height: 100vh;
+    height: 1500px;
+    overflow-y: auto;
+    background: linear-gradient(#02353c, rgb(58, 138, 58));
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Ensure it stays behind the content */
+    transition: all 0.5s ease;
+    box-sizing: border-box;
+
+}
+
+#background.two {
+    background: linear-gradient(to bottom, #02353c 0%, rgb(38, 28, 59) 500px, rgb(38, 28, 59) 500px, rgb(54, 47, 71) 100%);
+    max-height: 2000px;
+    overflow-y: auto;
+}
+
+#background.three {
+    background: linear-gradient(to bottom, #02353c 0%, #54362c 500px, #54362c 500px, #5b271e 100%);
+    max-height: 2000px;
+    overflow-y: auto;
+}
+
+#background.four {
+    background: linear-gradient(to bottom, #02353c 0%, #43471f 500px, #43471f 500px, #497149 100%);
+    max-height: 2000px;
+    overflow-y: auto;
+}
+
+#background.five {
+    /*  background: linear-gradient(to bottom, #02353c 0%, rgb(117, 84, 46) 500px, rgb(117, 84, 46) 500px, rgb(110, 67, 36) 100%); */
+    background: linear-gradient(to bottom, #02353c 0%, rgb(75, 100, 108) 500px, rgb(75, 100, 108) 500px, #414f5e 100%);
+    max-height: 2000px;
+    overflow-y: auto;
+}
+
+#background.long {
+    height: 2000px;
+    min-height: 100vh;
+}
