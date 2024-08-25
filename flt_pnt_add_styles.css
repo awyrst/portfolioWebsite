@@ -1,3 +1,8 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
 img.logo {
     position: relative;
     left: -7px;
