@@ -1,3 +1,8 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
 img.logo {
     position: relative;
     left: -7px;
@@ -13,7 +18,7 @@ img.logo {
     position: absolute;
     top: 0;
     left: 0;
-    height: 2000px;
+    height: 2500px;
     width: 80px;
     background-color: rgba(0, 0, 0, 0.5);
     padding: .4rem .8rem;
@@ -26,7 +31,7 @@ img.logo {
 }
 
 .sidebar.extended {
-    height: 2300px;
+    height: 2750px;
 }
 
 .sidebar.active {
@@ -159,9 +164,9 @@ button.nav {
     border: 3px outset;
     border-radius: 0.8rem;
     border-color: rgb(105, 240, 105);
-    width: 130px;
+    width: 100px;
     height: 55px;
-    font-size: large;
+    font-size: medium;
     margin-left: 30px;
     float: right;
     margin-right: 10px;
@@ -174,8 +179,6 @@ button.nav:hover {
     color: #02353c;
     border-radius: 5px;
     border-color: rgb(105, 240, 105);
-
-    font-size: large;
 
 }
 
@@ -192,7 +195,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 2000px;
+    height: 2500px;
     background: linear-gradient(to bottom, #02353c 0%, #02353c 60px, #02353c 60px, rgb(58, 138, 58) 100%);
     z-index: -1;
     background-repeat: no-repeat;
@@ -202,46 +205,69 @@ body {
 }
 
 #background.extended {
-    height: 2300px;
+    height: 2750px;
 }
 
 .resumetext {
     position: absolute;
-    left: 200px;
+    left: 160px;
     top: 20px;
     font-family: "Courier";
+    font-size: 12pt;
     color: #10e492;
 
 
 }
 
+#explanation {
+    position: absolute;
+    text-align: center;
+    left: 150px;
+    top: 90px;
+    width: 1400px;
+    font-size: 16pt;
+    font-family: 'Courier New', Courier, monospace;
+    color: greenyellow;
+
+}
+
 #resume {
     position: absolute;
-    left: 550px;
-    top: 0px;
+    left: 540px;
+    top: 15px;
+    color: #10e492;
+    border-color: #10e492;
+}
+
+#resume:hover {
+    background-color: #10e492;
+    color: #02353c;
 }
 
 #projects {
     position: absolute;
-    top: 75px;
-    left: 720px;
+    top: 15px;
+    left: 79%;
+
 
 }
 
 .projects {
     position: absolute;
-    left: 200px;
-    top: 80px;
+    left: 45%;
+    top: 20px;
+    text-align: center;
     font-family: "Courier";
+    font-size: 12pt;
     color: rgb(11, 232, 11);
 }
 
 #text {
 
     position: absolute;
-    top: 130px;
-    left: 23%;
-    width: 925px;
+    top: 170px;
+    left: 12%;
+    width: 1325px;
     height: 400px;
 
     margin: 0 auto;
@@ -270,6 +296,7 @@ body {
 
 .subexp {
     font-family: "Monospace";
+    font-size: 25pt;
     color: #95AA15;
     text-indent: -50px;
 }
@@ -277,18 +304,19 @@ body {
 .big {
     font-family: "Courier";
     color: rgb(11, 232, 11);
-
+    font-size: 18pt;
 }
 
 .preamble {
     font-family: "Courier";
     color: rgb(11, 232, 11);
+    font-size: 15pt;
 }
 
 .text {
     font-family: "Courier";
     color: #10e492;
-
+    font-size: 16pt;
 }
 
 
@@ -320,6 +348,7 @@ body {
 .role {
     font-family: "Courier";
     color: #10e492;
+    font-size: 18pt;
 }
 
 #secondbar {

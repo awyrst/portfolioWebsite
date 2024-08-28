@@ -236,7 +236,7 @@ h1 {
 
 .item {
     color: rgb(105, 240, 105);
-    font-size: large;
+    font-size: 18pt;
     font-family: courier;
 }
 
@@ -251,15 +251,15 @@ h1 {
 img.home {
     position: absolute;
     left: -60px;
-    width: 450px;
-    height: 300px;
+    width: 530px;
+    height: 370px;
     border-radius: 5px;
 }
 
 img.projects {
     position: absolute;
-    left: -100px;
-    top: 430px;
+    left: 0px;
+    top: 530px;
     width: 520px;
     height: 330px;
     border-radius: 5px;
@@ -267,16 +267,16 @@ img.projects {
 
 img.parker {
     position: absolute;
-    left: 450px;
+    left: 550px;
     top: 200px;
-    width: 680px;
-    height: 400px;
+    width: 780px;
+    height: 500px;
     border-radius: 5px;
 }
 
 .content {
     position: absolute;
-    top: 790px;
+    top: 890px;
     width: 90vw;
 }
 
@@ -284,14 +284,15 @@ img.parker {
     position: relative;
     left: 400px;
     color: rgb(105, 240, 105);
-    font-size: x-large;
+    font-size: 20pt;
     font-family: courier;
 }
 
 h3 {
     position: relative;
+    top: -50px;
     left: 200px;
     color: rgb(105, 240, 105);
-    font-size: large;
+    font-size: 20pt;
     font-family: courier;
 }

@@ -237,7 +237,7 @@ h1 {
 
 .item {
     color: rgb(105, 240, 105);
-    font-size: large;
+    font-size: 18pt;
     font-family: courier;
 }
 
@@ -288,7 +288,7 @@ img.schematic {
     position: relative;
     left: 400px;
     color: rgb(105, 240, 105);
-    font-size: x-large;
+    font-size: 20pt;
     font-family: courier;
 }
 
@@ -296,6 +296,6 @@ h3 {
     position: relative;
     left: 200px;
     color: rgb(105, 240, 105);
-    font-size: large;
+    font-size: 20pt;
     font-family: courier;
 }

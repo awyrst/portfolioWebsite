@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
     overflow-x: hidden;
 
 }
@@ -15,48 +14,54 @@ img.myicon {
 
 }
 
+img.walkie {
+    position: absolute;
+    left: 600px;
+    top: 210px;
+    height: 250px;
+    width: 250px;
+}
+
 img.hill1 {
     position: absolute;
-    top: 1025px;
-    right: 60px;
-    height: 300px;
-    width: 520px;
-    border-radius: 200px;
+    top: 1105px;
+    right: 40px;
+    height: 440px;
+    width: 700px;
+    border-radius: 100px;
     transform: rotate(-10deg);
 }
 
 img.hill2 {
     position: absolute;
-    top: 1000px;
-    left: 110px;
-    height: 400px;
-    width: 720px;
-    border-radius: 500px;
-    transform: rotate(10deg);
+    top: 1115px;
+    left: 100px;
+    height: 450px;
+    width: 820px;
+    border-radius: 100px;
 }
 
 img.radio_tower1 {
     position: absolute;
-    top: 915px;
-    left: 255px;
-    height: 400px;
-    width: 240px;
-    transform: rotate(12deg);
+    top: 1100px;
+    left: 230px;
+    height: 395px;
+    width: 200px;
 }
 
 img.radio_tower2 {
     position: absolute;
-    top: 1000px;
-    right: 200px;
-    height: 300px;
-    width: 150px;
+    top: 1040px;
+    right: 180px;
+    height: 450px;
+    width: 230px;
     transform: scaleX(-1) rotate(10deg);
 }
 
 img.hill1.shift {
     position: absolute;
-    top: 1525px;
-    right: 60px;
+    top: 1550px;
+    right: 20px;
 }
 
 img.hill2.shift {
@@ -67,43 +72,61 @@ img.hill2.shift {
 
 img.radio_tower1.shift {
     position: absolute;
-    top: 1415px;
+    top: 1500px;
     left: 255px;
 }
 
 img.radio_tower2.shift {
     position: absolute;
-    top: 1500px;
-    right: 200px;
+    top: 1480px;
+    right: 160px;
 }
 
 img.profile_pic {
-
-    height: 200px;
-    width: 200px;
-    border-radius: 100px;
+    position: relative;
+    top: 40px;
+    left: 20px;
+    height: 320px;
+    width: 320px;
+    border-radius: 160px;
 }
 
 img.radio {
     position: absolute;
-    top: 80px;
+    top: 50px;
     right: 30px;
-    height: 350px;
-    width: 350px;
+    height: 500px;
+    width: 500px;
 }
 
-img.radio_wave {
+img.radio_wave1 {
     position: absolute;
-    top: 20px;
-    right: 315px;
-    height: 90px;
-    width: 60px;
+    top: -10px;
+    right: 430px;
+    height: 120px;
+    width: 80px;
     transform: rotate(260deg);
     opacity: 0;
     transition: all 0.5s ease;
 }
 
-img.radio_wave.visible {
+img.radio_wave2 {
+    position: absolute;
+    top: 100px;
+    left: 710px;
+    height: 100px;
+    width: 70px;
+    transform: rotate(100deg);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+img.radio_wave1.visible {
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+img.radio_wave2.visible {
     opacity: 1;
     transition: all 0.5s ease;
 }
@@ -112,10 +135,10 @@ img.radio_wave.visible {
 
 .presetBar {
     position: absolute;
-    top: 100px;
+    top: 50px;
     left: 120px;
-    height: 275px;
-    width: 350px;
+    height: 375px;
+    width: 450px;
     background-color: rgb(61, 103, 127);
     border: 5px outset rgb(97, 80, 135);
     border-radius: 20px;
@@ -123,21 +146,28 @@ img.radio_wave.visible {
 }
 
 #presetty {
+    position: relative;
+    top: 5px;
     font-family: Monospace;
     color: #95AA15;
-    font-size: xx-large;
+    font-size: 30pt;
 }
 
 .options {
+    position: relative;
     font-family: Courier;
     color: rgb(105, 240, 105);
+    top: 20px;
+    font-size: 16pt;
 }
 
 #changechannel {
     position: absolute;
-    right: 35%;
-    top: 110px;
+    right: 34%;
+    top: 80px;
     text-align: center;
+    width: 240px;
+    font-size: 14pt;
     font-family: Courier;
     color: rgb(208, 180, 243);
 
@@ -147,20 +177,20 @@ img.radio_wave.visible {
 
 .dial {
     position: absolute;
-    top: 210px;
-    right: 38%;
-    height: 200px;
-    width: 200px;
+    top: 200px;
+    right: 34%;
+    height: 250px;
+    width: 250px;
 }
 
 .circle {
     position: relative;
-    top: 10px;
-    left: 10px;
-    height: 70px;
-    width: 70px;
+    top: 20px;
+    left: 20px;
+    height: 110px;
+    width: 110px;
     border: 2px outset;
-    border-radius: 40px;
+    border-radius: 55px;
     background-color: #02353c;
 }
 
@@ -168,41 +198,41 @@ img.radio_wave.visible {
     position: relative;
     top: 15px;
     left: 15px;
-    height: 40px;
-    width: 40px;
+    height: 80px;
+    width: 80px;
     border: 2px outset;
-    border-radius: 20px;
+    border-radius: 40px;
     background-color: black;
 }
 
 .needle_border {
     position: relative;
-    left: 34px;
-    top: -75px;
+    left: 49px;
+    top: -130px;
     width: 0;
     height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 40px solid white;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 80px solid white;
 }
 
 .needle {
     position: relative;
-    right: 15px;
+    right: 30px;
     top: 3px;
     width: 0;
     height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 40px solid black;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 80px solid black;
 }
 
 button.preset {
 
     background-color: rgb(61, 103, 127);
     color: rgb(105, 240, 105);
-    height: 30px;
-    width: 25px;
+    height: 40px;
+    width: 32px;
     border: 2px outset;
     border-radius: 0.8rem;
     border-color: gray;
@@ -217,43 +247,43 @@ button.preset:hover {
 
 .shape {
     position: relative;
-    top: 60px;
-    left: 44px;
-    height: 90px;
-    width: 90px;
+    left: 50px;
+    top: 50px;
+    height: 150px;
+    width: 150px;
 
 }
 
 #first {
     position: relative;
-    left: 80px;
-    top: -80px;
+    left: 112px;
+    top: -180px;
 
 }
 
 #second {
     position: relative;
-    left: 125px;
-    top: -20px;
+    left: 195px;
+    top: -80px;
 
 }
 
 #third {
     position: relative;
-    left: 65px;
+    left: 105px;
     top: 65px;
 }
 
 #fourth {
     position: relative;
-    left: -65px;
+    left: -80px;
     top: 65px;
 }
 
 #fifth {
     position: relative;
-    left: -120px;
-    top: -20px;
+    left: -165px;
+    top: -80px;
 
 }
 
@@ -280,19 +310,19 @@ button.preset:hover {
 .header {
     position: absolute;
     font-family: monospace;
-    left: 550px;
-    top: 10px;
+    left: 750px;
+    top: 0px;
     color: #95AA15;
-    font-size: xx-large;
+    font-size: 30pt;
 }
 
 /* Content of preset 1 */
 .presetNumOne {
     position: absolute;
-    top: 450px;
-    left: 30%;
-    height: 450px;
-    width: 600px;
+    top: 500px;
+    left: 8%;
+    height: 530px;
+    width: 1000px;
     padding: 15px;
     background-color: rgb(83, 134, 88);
     border: 5px outset rgb(13, 71, 142);
@@ -305,27 +335,58 @@ button.preset:hover {
 }
 
 #name {
+    position: relative;
+    top: 20px;
     font-family: Monospace;
     color: #95AA15;
-    font-size: xx-large;
+    font-size: 24pt;
 }
 
 #p1 {
     position: relative;
-    top: -225px;
-    left: 215px;
-    width: 400px;
+    top: -415px;
+    left: 380px;
+    width: 620px;
     font-family: courier;
+    font-size: 15pt;
     color: #38038e;
 }
 
 #p2 {
     position: relative;
-    top: -230px;
-    left: 0;
-    height: 152px;
+    top: -410px;
+    left: 380px;
+    width: 620px;
     font-family: courier;
+    font-size: 15pt;
     color: #38038e;
+}
+
+img.logo2 {
+    position: absolute;
+    top: 300px;
+    left: 1100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+img.info {
+    position: absolute;
+    top: 30px;
+    left: 1100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+img.website_build {
+    position: absolute;
+    top: 150px;
+    left: 1350px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
 }
 
 /* content preset 2 */
@@ -334,9 +395,9 @@ button.preset:hover {
     position: absolute;
     transition: all ease 0.5s;
     position: absolute;
-    left: 0;
+    left: 0px;
     top: 0;
-    width: 1025px;
+    width: 1425px;
     height: 900px;
     background-color: rgba(74, 53, 100, 0.717);
     border: 4px solid rgb(63, 108, 132);
@@ -347,104 +408,105 @@ button.preset:hover {
 
 .presetNumTwo.visible {
     opacity: 1;
-    left: 15%;
-    top: 450px;
+    left: 10%;
+    top: 550px;
     z-index: 1;
 }
 
 .cat {
     position: relative;
-    top: 425px;
-    left: 500px;
-    height: 100px;
-    width: 133px;
+    top: 385px;
+    left: 1050px;
+    height: 130px;
+    width: 175px;
 }
 
 .maxEqns {
     position: relative;
-    top: -30px;
-    left: 315px;
-    height: 270px;
-    width: 380px;
+    top: -60px;
+    left: 600px;
+    height: 300px;
+    width: 420px;
     transform: rotate(2deg);
 }
 
 .bandgap {
     position: relative;
-    top: -20px;
-    left: 100px;
-    height: 180px;
-    width: 320px;
+    top: -50px;
+    left: 550px;
+    height: 200px;
+    width: 370px;
 }
 
 .blackhole1 {
     position: relative;
-    top: 250px;
-    left: 640px;
-    height: 130px;
-    width: 130px;
+    top: 210px;
+    left: 900px;
+    height: 150px;
+    width: 150px;
+    transform: rotate(-50deg);
 }
 
 .blackhole2 {
     position: relative;
-    top: 400px;
-    right: -390px;
-    height: 160px;
-    width: 220px;
+    top: 320px;
+    right: -860px;
+    height: 190px;
+    width: 260px;
 }
 
 .heatEqn {
     position: relative;
-    top: 130px;
-    left: 625px;
-    height: 70px;
-    width: 220px;
+    top: 250px;
+    left: -152px;
+    height: 80px;
+    width: 235px;
 
 }
 
 .waveEqn {
     position: relative;
-    top: 300px;
-    left: 850px;
-    height: 70px;
-    width: 170px;
+    top: 320px;
+    left: 1050px;
+    height: 80px;
+    width: 190px;
 
 }
 
 .furierTrnsfrm {
     position: relative;
     top: 250px;
-    right: 35px;
-    height: 70px;
-    width: 240px;
+    right: -350px;
+    height: 80px;
+    width: 260px;
     transform: rotate(-3deg);
 }
 
 #mathphysics {
     position: relative;
     left: 180px;
-    width: 450px;
-    font-size: x-large;
+    width: 650px;
+    font-size: 25pt;
     font-family: Monospace;
     color: rgb(58, 162, 197);
 }
 
 #theinterest {
     position: relative;
-    top: -460px;
+    top: -550px;
     left: 10px;
-    width: 600px;
-    font-size: medium;
+    width: 900px;
+    font-size: 15pt;
     font-family: Courier;
     color: rgb(58, 162, 197);
 }
 
 #learned1 {
     position: relative;
-    top: -425px;
+    top: -555px;
     left: 10px;
-    width: 600px;
-    font-size: medium;
+    width: 900px;
+    font-size: 15pt;
     font-family: Courier;
     color: rgb(58, 162, 197);
 }
@@ -456,9 +518,9 @@ button.preset:hover {
     opacity: 0;
     transition: all ease 0.5s;
     position: absolute;
-    left: 0;
+    left: 0px;
     top: 0;
-    width: 1025px;
+    width: 1425px;
     height: 900px;
     background-color: rgba(96, 49, 64, 0.646);
     border: 4px inset rgb(245, 148, 137);
@@ -468,42 +530,42 @@ button.preset:hover {
 
 .presetNumThree.visible {
     opacity: 1;
-    left: 15%;
-    top: 450px;
+    left: 10%;
+    top: 550px;
     z-index: 1;
 }
 
 .frontsquat {
     position: relative;
-    top: 145px;
-    left: 65px;
-    height: 230px;
-    width: 180px;
+    top: -20px;
+    left: -195px;
+    height: 250px;
+    width: 200px;
     border-radius: 30px;
 }
 
 .backsquat {
     position: relative;
-    top: 40px;
-    left: 10px;
-    height: 270px;
-    width: 210px;
+    top: 290px;
+    left: 310px;
+    height: 290px;
+    width: 200px;
     border-radius: 30px;
 }
 
 .doublesided {
     position: relative;
     left: -370px;
-    bottom: -560px;
-    height: 175px;
-    width: 430px;
+    bottom: -490px;
+    height: 190px;
+    width: 460px;
     border-radius: 10px;
 }
 
 .ohp {
     position: absolute;
-    right: 590px;
-    bottom: 215px;
+    right: 870px;
+    bottom: 535px;
     height: 200px;
     width: 150px;
     border-radius: 10px;
@@ -511,8 +573,8 @@ button.preset:hover {
 
 .incline {
     position: relative;
-    right: 580px;
-    top: -100px;
+    right: 650px;
+    top: -70px;
     height: 175px;
     width: 135px;
     border-radius: 10px;
@@ -520,40 +582,40 @@ button.preset:hover {
 
 .deadlift {
     position: absolute;
-    right: 770px;
-    bottom: 210px;
-    height: 300px;
-    width: 240px;
+    right: 1170px;
+    bottom: 230px;
+    height: 280px;
+    width: 200px;
     border-radius: 10px;
-    transform: rotate(-7deg);
+    transform: rotate(-1deg);
 }
 
 #fitnessstrength {
     position: relative;
-    left: 300px;
+    left: 20px;
     top: -10px;
-    width: 450px;
-    font-size: x-large;
+    width: 650px;
+    font-size: 25pt;
     font-family: Monospace;
     color: rgb(245, 148, 137);
 }
 
 #howitstarted {
     position: relative;
-    top: -280px;
-    left: 500px;
-    width: 500px;
-    font-size: medium;
+    top: -330px;
+    left: 600px;
+    width: 800px;
+    font-size: 15pt;
     font-family: Courier;
     color: rgb(245, 148, 137);
 }
 
 #thegrind {
     position: relative;
-    top: -250px;
-    left: 500px;
-    width: 500px;
-    font-size: medium;
+    top: -300px;
+    left: 550px;
+    width: 850px;
+    font-size: 15pt;
     font-family: Courier;
     color: rgb(245, 148, 137);
 }
@@ -566,7 +628,7 @@ button.preset:hover {
     position: absolute;
     left: 0;
     top: 0;
-    width: 1025px;
+    width: 1425px;
     height: 900px;
     background-color: rgba(31, 88, 141, 0.282);
     border: 4px inset rgb(137, 245, 202);
@@ -577,8 +639,8 @@ button.preset:hover {
 
 .presetNumFour.visible {
     opacity: 1;
-    left: 15%;
-    top: 450px;
+    left: 10%;
+    top: 550px;
     z-index: 1;
 }
 
@@ -587,83 +649,83 @@ button.preset:hover {
     position: relative;
     color: #badd7e;
     left: 400px;
-    font-size: x-large;
+    font-size: 25pt;
 }
 
 #compsci {
     font-family: courier;
     position: relative;
     color: #badd7e;
-    font-size: medium;
-    top: 15px;
+    font-size: 15pt;
+    top: -15px;
     left: 10px;
-    width: 500px;
+    width: 800px;
 }
 
 #artInt {
     font-family: courier;
     position: relative;
     color: #badd7e;
-    font-size: medium;
-    top: 0px;
-    left: 500px;
-    width: 500px;
+    font-size: 15pt;
+    top: -35px;
+    left: 600px;
+    width: 800px;
 }
 
 .programming {
     position: relative;
-    bottom: 780px;
-    left: 420px;
-    height: 200px;
-    width: 200px;
+    bottom: 930px;
+    left: 670px;
+    height: 300px;
+    width: 300px;
 }
 
 .xor {
     position: relative;
-    bottom: 900px;
-    left: 400px;
-    height: 80px;
-    width: 160px;
+    bottom: 750px;
+    left: 600px;
+    height: 100px;
+    width: 195px;
 }
 
 .ai {
     position: relative;
-    left: -520px;
+    left: -720px;
     bottom: 400px;
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 250px;
 }
 
 .cryptography {
     position: relative;
     bottom: 380px;
-    right: 420px;
-    height: 175px;
-    width: 175px;
+    right: 700px;
+    height: 250px;
+    width: 250px;
 }
 
 .disk {
     position: relative;
-    bottom: 380px;
-    left: 170px;
-    height: 150px;
-    width: 150px;
+    bottom: 1100px;
+    left: 870px;
+    height: 200px;
+    width: 200px;
 }
 
 .transistor {
     position: relative;
-    bottom: 750px;
-    left: 650px;
+    bottom: 1300px;
+    left: 750px;
     height: 150px;
     width: 150px;
 }
 
 .neuralnet {
     position: relative;
-    bottom: 650px;
-    left: 550px;
-    height: 175px;
-    width: 175px;
+    bottom: 700px;
+    left: 1100px;
+    height: 250px;
+    width: 250px;
 }
 
 /* content preset 5 */
@@ -674,7 +736,7 @@ button.preset:hover {
     position: absolute;
     left: 0;
     top: 0;
-    width: 1025px;
+    width: 1425px;
     height: 900px;
     background-color: rgba(26, 124, 125, 0.622);
     border: 4px inset rgba(54, 64, 100, 0.991);
@@ -684,53 +746,53 @@ button.preset:hover {
 
 .presetNumFive.visible {
     opacity: 1;
-    left: 15%;
-    top: 450px;
+    left: 10%;
+    top: 550px;
     z-index: 1;
 }
 
 .parker1 {
     position: relative;
-    top: 80px;
+    top: -20px;
     left: 30px;
-    width: 320px;
-    height: 400px;
+    width: 370px;
+    height: 450px;
     border-radius: 20px;
 }
 
 .parker2 {
     position: relative;
     right: 240px;
-    top: 400px;
-    width: 420px;
-    height: 250px;
+    top: 300px;
+    width: 500px;
+    height: 290px;
     border-radius: 20px;
 }
 
 .parker3 {
     position: relative;
-    left: 540px;
-    top: -60px;
-    width: 400px;
-    height: 310px;
+    left: -40px;
+    top: 290px;
+    width: 480px;
+    height: 370px;
     border-radius: 20px;
 }
 
 .parker4 {
     position: relative;
-    left: -30px;
-    top: -400px;
-    width: 300px;
-    height: 450px;
+    left: 440px;
+    top: -550px;
+    width: 360px;
+    height: 520px;
     border-radius: 20px;
 }
 
 .parker5 {
     position: relative;
-    left: -10px;
-    top: -420px;
-    width: 300px;
-    height: 380px;
+    left: 530px;
+    top: -630px;
+    width: 450px;
+    height: 450px;
     border-radius: 20px;
 }
 
@@ -738,7 +800,7 @@ button.preset:hover {
     position: relative;
     left: 50px;
     font-family: monospace;
-    font-size: xx-large;
+    font-size: 30pt;
     Color: rgba(54, 64, 100, 0.991);
 
 }
@@ -760,7 +822,7 @@ img.logo {
     position: absolute;
     top: 0;
     left: 0;
-    height: 1500px;
+    height: 1615px;
     width: 80px;
     background-color: rgba(0, 0, 0, 0.5);
     padding: .4rem .8rem;
@@ -770,7 +832,7 @@ img.logo {
 }
 
 .sidebar.long {
-    height: 2000px;
+    height: 2060px;
 }
 
 .sidebar.active {
@@ -932,8 +994,7 @@ button.nav:hover {
     top: 0;
     left: 0;
     width: 2440px;
-    min-height: 100vh;
-    height: 1500px;
+    height: 1615px;
     overflow-y: auto;
     background: linear-gradient(#02353c, rgb(58, 138, 58));
     z-index: -1;
@@ -947,30 +1008,29 @@ button.nav:hover {
 
 #background.two {
     background: linear-gradient(to bottom, #02353c 0%, rgb(38, 28, 59) 500px, rgb(38, 28, 59) 500px, rgb(54, 47, 71) 100%);
-    max-height: 2000px;
     overflow-y: auto;
 }
 
 #background.three {
     background: linear-gradient(to bottom, #02353c 0%, #54362c 500px, #54362c 500px, #5b271e 100%);
-    max-height: 2000px;
+
     overflow-y: auto;
 }
 
 #background.four {
     background: linear-gradient(to bottom, #02353c 0%, #43471f 500px, #43471f 500px, #497149 100%);
-    max-height: 2000px;
+
     overflow-y: auto;
 }
 
 #background.five {
     /*  background: linear-gradient(to bottom, #02353c 0%, rgb(117, 84, 46) 500px, rgb(117, 84, 46) 500px, rgb(110, 67, 36) 100%); */
     background: linear-gradient(to bottom, #02353c 0%, rgb(75, 100, 108) 500px, rgb(75, 100, 108) 500px, #414f5e 100%);
-    max-height: 2000px;
+
     overflow-y: auto;
 }
 
 #background.long {
-    height: 2000px;
+    height: 2060px;
     min-height: 100vh;
 }
