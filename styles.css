@@ -153,9 +153,9 @@ button.nav {
     border: 3px outset;
     border-radius: 0.8rem;
     border-color: rgb(105, 240, 105);
-    width: 130px;
-    height: 55px;
-    font-size: large;
+    width: 150px;
+    height: 65px;
+    font-size: 15pt;
     margin-left: 30px;
     float: right;
     margin-right: 10px;
@@ -169,7 +169,6 @@ button.nav:hover {
     border-radius: 5px;
     border-color: rgb(105, 240, 105);
 
-    font-size: large;
 
 }
 
@@ -210,19 +209,19 @@ body {
 .big {
     font-family: "Monospace";
     color: #95AA15;
-    font-size: 30pt;
+    font-size: 33pt;
 }
 
 .text {
     font-family: "Courier";
     color: #10e492;
-    font-size: 18pt;
+    font-size: 20pt;
 }
 
 #projects {
     position: absolute;
-    top: 460px;
-    left: 54%;
+    top: 515px;
+    left: 55%;
 
 }
 
@@ -313,12 +312,41 @@ img.sat2 {
         overflow-y: hidden;
     }
 
+    img {
+        display: none;
+    }
+
+    p {
+        display: none;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    h2 {
+        display: none;
+    }
+
+    h3 {
+        display: none;
+    }
+
+    button {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
     #background {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        ;
         background: linear-gradient(#02353c, rgb(58, 138, 58));
         z-index: 10;
 
