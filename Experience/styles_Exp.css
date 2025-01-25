@@ -1,367 +1,808 @@
-html,
-body {
-    overflow-x: hidden;
+@media (max-width: 500px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    img.logo {
+        position: relative;
+        left: -10px;
+        top: 0;
+        width: 40px;
+        height: 40px;
+    }
+
+    .sidebar {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Courier;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 500%;
+        width: 60px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: .4rem .8rem;
+        transition: all 0.5s ease;
+        opacity: 1;
+    }
+
+    .sidebar.active {
+        width: 160px;
+        z-index: 1;
+        opacity: 1;
+
+    }
+
+    .sidebar #btn {
+        position: absolute;
+        color: rgb(105, 240, 105);
+        top: 0px;
+        left: 50%;
+        font-size: 1rem;
+        line-height: 50px;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+
+    .sidebar.active #btn {
+        left: 90%;
+    }
+
+    .sidebar .top .name {
+        position: relative;
+        right: 0px;
+        color: rgb(105, 240, 105);
+        display: flex;
+        height: 50px;
+        width: 100%;
+        font-size: 10pt;
+        align-items: center;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .sidebar.active .top .name {
+        opacity: 1;
+    }
+
+    .sidebar ul {
+        position: relative;
+        right: 20%;
+    }
+
+    .sidebar ul li {
+        position: relative;
+        right: 36px;
+        list-style-type: none;
+        height: 50px;
+        width: 50px;
+        margin: 1.2rem auto;
+        color: rgb(105, 240, 105);
+        line-height: 50px;
+        font-size: 1rem;
+        border-color: rgb(105, 240, 105);
+        border-width: 2px;
+        border-radius: 35px;
+    }
+
+    .sidebar ul li a {
+        color: rgb(105, 240, 105);
+        display: flex;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        text-align: center;
+        font-size: 10pt;
+        text-decoration: none;
+        vertical-align: center;
+        line-height: 50px;
+        border-color: rgb(105, 240, 105);
+        border-width: 2px;
+
+    }
+
+    .sidebar ul li a :active {
+        background-color: rgb(105, 240, 105);
+        color: #02353c;
+        border-color: #02353c;
+        border-radius: 10px;
+    }
+
+    .sidebar.active ul li {
+        right: 40px;
+    }
+
+    .sidebar.active ul li a {
+        width: 120px;
+        padding: 2px;
+        height: 30px;
+    }
+
+    .sidebar ul li a i {
+        position: relative;
+        top: 0px;
+        min-width: 40px;
+        text-align: center;
+        vertical-align: center;
+        height: 40px;
+        border-radius: 2px;
+        line-height: 42px;
+        font-size: 10pt;
+    }
+
+    .sidebar ul li a span {
+        position: relative;
+        bottom: 15px;
+        height: 20px;
+    }
+
+    .sidebar .sidebar-item {
+        opacity: 0;
+    }
+
+    .sidebar.active .sidebar-item {
+        opacity: 1;
+    }
+
+    .sidebar ul li .tooltip {
+        display: none;
+    }
+
+    .link {
+        color: yellow;
+    }
+
+    .link:hover {
+        color: orange;
+        cursor: pointer;
+    }
+
+    button.nav {
+
+        background-color: transparent;
+        color: rgb(105, 240, 105);
+        border: 2% outset;
+        border-radius: 0.8rem;
+        border-color: rgb(105, 240, 105);
+        width: 25%;
+        height: 5%;
+        font-size: 11pt;
+        margin-left: 10%;
+        float: right;
+        margin-right: 2%;
+        margin-top: 2%;
+        cursor: pointer;
+    }
+
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #background {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 500%;
+        background: linear-gradient(#02353c, rgb(58, 138, 58));
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        /* Ensure it stays behind the content */
+
+    }
+
+    #background.extended {
+        height: 3450px;
+    }
+
+    .resumetext {
+        position: absolute;
+        left: 19%;
+        top: 3%;
+        width: 150px;
+        font-family: "Courier";
+        font-size: 9pt;
+        color: #10e492;
+
+
+    }
+
+    #explanation {
+        position: absolute;
+        text-align: center;
+        left: 16%;
+        top: 20%;
+        width: 80%;
+        font-size: 11pt;
+        font-family: 'Courier New', Courier, monospace;
+        color: greenyellow;
+
+    }
+
+    #resume {
+        width: 100px;
+        height: 40px;
+        font-size: 11pt;
+        position: absolute;
+        left: 15%;
+        top: 8%;
+        color: #10e492;
+        border-color: #10e492;
+    }
+
+    #resume:active {
+        background-color: #10e492;
+        color: #02353c;
+    }
+
+    #projects {
+        position: absolute;
+        top: 14%;
+        left: 55%;
+    }
+
+    #projects:active {
+        color: #02353c;
+        background-color: rgb(105, 240, 105);
+    }
+
+    .projects {
+        position: absolute;
+        left: 58%;
+        top: 1%;
+        width: 150px;
+        text-align: center;
+        font-family: "Courier";
+        font-size: 9pt;
+        color: rgb(11, 232, 11);
+    }
+
+    #text {
+
+        position: absolute;
+        top: 35%;
+        left: 20%;
+        width: 75%;
+
+
+    }
+
+    .read-more-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .read-more-btn {
+        font-family: "Tahoma";
+        color: #95AA15;
+        cursor: pointer;
+    }
+
+    .read-more-text {
+        display: none;
+    }
+
+    .read-more-text--show {
+        display: inline;
+    }
+
+    .subexp {
+        font-family: "Tahoma";
+        font-size: 16pt;
+        color: #95AA15;
+        text-indent: 14px;
+    }
+
+    .big {
+        font-family: "Courier";
+        color: rgb(11, 232, 11);
+        font-size: 16pt;
+    }
+
+    .preamble {
+        font-family: "Courier";
+        color: rgb(11, 232, 11);
+        font-size: 11pt;
+    }
+
+    .text {
+        font-family: "Courier";
+        color: #10e492;
+        font-size: 11pt;
+    }
+
+
+    .link {
+        color: yellow;
+    }
+
+    .link:hover {
+        color: orange;
+    }
+
+    .bar {
+        position: relative;
+        left: 0%;
+        height: 3px;
+        width: 100%;
+        background-color: #95AA15;
+    }
+
+    #zerobar {
+        position: relative;
+    }
+
+    #firstbar {
+        position: relative;
+
+    }
+
+    .role {
+        font-family: "Courier";
+        color: #10e492;
+        font-size: 14pt;
+    }
+
+    #secondbar {
+        position: relative;
+
+    }
+
+
+
+    #recent0 {
+        position: relative;
+        top: 77px;
+        font-size: medium;
+        color: #10e492;
+    }
 }
 
-img.logo {
-    position: relative;
-    left: -7px;
-    top: 0;
-    width: 70px;
-    height: 70px;
-}
-
-.sidebar {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Courier;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 3100px;
-    width: 80px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: .4rem .8rem;
-    transition-property: height;
-    transition-duration: 0ms;
-    transition-property: width;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    opacity: 1;
-}
-
-.sidebar.extended {
-    height: 3450px;
-}
-
-.sidebar.active {
-    width: 250px;
-    z-index: 1;
-    opacity: 1;
-
-}
-
-.sidebar #btn {
-    position: absolute;
-    color: rgb(105, 240, 105);
-    top: 0px;
-    left: 50%;
-    font-size: 1.2rem;
-    line-height: 50px;
-    transform: translateX(-50%);
-    cursor: pointer;
-}
-
-.sidebar.active #btn {
-    left: 90%;
-}
-
-.sidebar .top .name {
-    color: rgb(105, 240, 105);
-    display: flex;
-    height: 50px;
-    width: 100%;
-    align-items: center;
-    pointer-events: none;
-    opacity: 0;
-}
-
-.sidebar.active .top .name {
-    opacity: 1;
-}
-
-.sidebar ul li {
-    position: relative;
-    right: 38px;
-    list-style-type: none;
-    height: 50px;
-    width: 90%;
-    margin: 0.8rem auto;
-    color: rgb(105, 240, 105);
-    line-height: 50px;
-}
-
-
-
-.sidebar ul li a {
-    color: rgb(105, 240, 105);
-    display: flex;
-    width: 50px;
-    height: 50px;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 0.8rem;
-    vertical-align: center;
-    line-height: 50px;
-
-}
-
-.sidebar ul li a:hover {
-    background-color: rgb(105, 240, 105);
-    color: #02353c;
-}
-
-.sidebar.active ul li a {
-    width: 160px;
-    padding: 2px;
-}
-
-.sidebar ul li a i {
-    position: relative;
-    min-width: 50px;
-    text-align: center;
-    height: 50px;
-    border-radius: 2px;
-    vertical-align: center;
-    line-height: 42px;
-}
-
-.sidebar .sidebar-item {
-    opacity: 0;
-}
-
-.sidebar.active .sidebar-item {
-    opacity: 1;
-}
-
-.sidebar ul li .tooltip {
-    position: absolute;
-    left: 125px;
-    top: 50%;
-    color: black;
-    background-color: rgb(105, 240, 105);
-    transform: translate(-20%, -50%);
-    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.3);
-    border-radius: 0.6rem;
-    padding: 0.4rem 1.2rem;
-    line-height: 1.8rem;
-    z-index: 20;
-    opacity: 0;
-}
-
-.sidebar ul li:hover .tooltip {
-    opacity: 1;
-}
-
-.sidebar.active ul li .tooltip {
-    display: none;
-}
-
-.link {
-    color: yellow;
-}
-
-.link:hover {
-    color: orange;
-    cursor: pointer;
-}
-
-button.nav {
-
-    background-color: transparent;
-    color: rgb(105, 240, 105);
-    border: 3px outset;
-    border-radius: 0.8rem;
-    border-color: rgb(105, 240, 105);
-    width: 110px;
-    height: 65px;
-    font-size: 12pt;
-    margin-left: 30px;
-    float: right;
-    margin-right: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-button.nav:hover {
-    background-color: rgb(105, 240, 105);
-    color: #02353c;
-    border-radius: 5px;
-    border-color: rgb(105, 240, 105);
-
-}
-
-
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-#background {
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3100px;
-    background: linear-gradient(to bottom, #02353c 0%, #02353c 60px, #02353c 60px, rgb(58, 138, 58) 100%);
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    /* Ensure it stays behind the content */
-
-}
-
-#background.extended {
-    height: 3450px;
-}
-
-.resumetext {
-    position: absolute;
-    left: 120px;
-    top: 40px;
-    font-family: "Courier";
-    font-size: 15pt;
-    color: #10e492;
-
-
-}
-
-#explanation {
-    position: absolute;
-    text-align: center;
-    left: 200px;
-    top: 110px;
-    width: 1400px;
-    font-size: 18pt;
-    font-family: 'Courier New', Courier, monospace;
-    color: greenyellow;
-
-}
-
-#resume {
-    position: absolute;
-    left: 590px;
-    top: 15px;
-    color: #10e492;
-    border-color: #10e492;
-}
-
-#resume:hover {
-    background-color: #10e492;
-    color: #02353c;
-}
-
-#projects {
-    position: absolute;
-    top: 15px;
-    left: 86%;
-
-
-}
-
-.projects {
-    position: absolute;
-    left: 47%;
-    top: 20px;
-    text-align: center;
-    font-family: "Courier";
-    font-size: 15pt;
-    color: rgb(11, 232, 11);
-}
-
-#text {
-
-    position: absolute;
-    top: 210px;
-    left: 14%;
-    width: 1325px;
-    height: 400px;
-
-    margin: 0 auto;
-
-}
-
-.read-more-container {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.read-more-btn {
-    font-family: "Monospace";
-    color: #95AA15;
-    cursor: pointer;
-}
-
-.read-more-text {
-    display: none;
-}
-
-.read-more-text--show {
-    display: inline;
-}
-
-.subexp {
-    font-family: "Monospace";
-    font-size: 28pt;
-    color: #95AA15;
-    text-indent: -50px;
-}
-
-.big {
-    font-family: "Courier";
-    color: rgb(11, 232, 11);
-    font-size: 20pt;
-}
-
-.preamble {
-    font-family: "Courier";
-    color: rgb(11, 232, 11);
-    font-size: 18pt;
-}
-
-.text {
-    font-family: "Courier";
-    color: #10e492;
-    font-size: 19pt;
-}
-
-
-.link {
-    color: yellow;
-}
-
-.link:hover {
-    color: orange;
-}
-
-.bar {
-    height: 3px;
-    width: 120%;
-    background-color: #95AA15;
-}
-
-#zerobar {
-    position: relative;
-    left: -50px;
-}
-
-#firstbar {
-    position: relative;
-    left: -50px;
-
-}
-
-.role {
-    font-family: "Courier";
-    color: #10e492;
-    font-size: 18pt;
-}
-
-#secondbar {
-    position: relative;
-    left: -50px;
-
-}
-
-
-
-#recent0 {
-    position: relative;
-    top: 77px;
-    font-size: medium;
-    color: #10e492;
+
+@media (min-width: 500px) {
+
+    html,
+    body {
+        max-width: 2040px;
+        margin: 0;
+        padding: 0;
+    }
+
+    img.logo {
+        position: relative;
+        left: -7px;
+        top: 0;
+        width: 70px;
+        height: 70px;
+    }
+
+    .sidebar {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Courier;
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 3750px;
+        height: 100%;
+        width: 80px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: .4rem .8rem;
+        transition-property: height;
+        transition-duration: 0ms;
+        transition-property: width;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+        opacity: 1;
+    }
+
+    .sidebar.extended {
+        min-height: 4050px;
+    }
+
+    .sidebar.active {
+        width: 250px;
+        z-index: 1;
+        opacity: 1;
+
+    }
+
+    .sidebar #btn {
+        position: absolute;
+        color: rgb(105, 240, 105);
+        top: 0px;
+        left: 50%;
+        font-size: 1.2rem;
+        line-height: 50px;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+
+    .sidebar.active #btn {
+        left: 90%;
+    }
+
+    .sidebar .top .name {
+        color: rgb(105, 240, 105);
+        display: flex;
+        height: 50px;
+        width: 100%;
+        align-items: center;
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .sidebar.active .top .name {
+        opacity: 1;
+    }
+
+    .sidebar ul li {
+        position: relative;
+        right: 38px;
+        list-style-type: none;
+        height: 50px;
+        width: 90%;
+        margin: 0.8rem auto;
+        color: rgb(105, 240, 105);
+        line-height: 50px;
+    }
+
+
+
+    .sidebar ul li a {
+        color: rgb(105, 240, 105);
+        display: flex;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 0.8rem;
+        vertical-align: center;
+        line-height: 50px;
+
+    }
+
+    .sidebar ul li a:hover {
+        background-color: rgb(105, 240, 105);
+        color: #02353c;
+    }
+
+    .sidebar.active ul li a {
+        width: 160px;
+        padding: 2px;
+    }
+
+    .sidebar ul li a i {
+        position: relative;
+        min-width: 50px;
+        text-align: center;
+        height: 50px;
+        border-radius: 2px;
+        vertical-align: center;
+        line-height: 42px;
+    }
+
+    .sidebar .sidebar-item {
+        opacity: 0;
+    }
+
+    .sidebar.active .sidebar-item {
+        opacity: 1;
+    }
+
+    .sidebar ul li .tooltip {
+        position: absolute;
+        left: 125px;
+        top: 50%;
+        color: black;
+        background-color: rgb(105, 240, 105);
+        transform: translate(-20%, -50%);
+        box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.3);
+        border-radius: 0.6rem;
+        padding: 0.4rem 1.2rem;
+        line-height: 1.8rem;
+        z-index: 20;
+        opacity: 0;
+    }
+
+    .sidebar ul li:hover .tooltip {
+        opacity: 1;
+    }
+
+    .sidebar.active ul li .tooltip {
+        display: none;
+    }
+
+    .link {
+        color: yellow;
+    }
+
+    .link:hover {
+        color: orange;
+        cursor: pointer;
+    }
+
+    button.nav {
+
+        background-color: transparent;
+        color: rgb(105, 240, 105);
+        border: 3px outset;
+        border-radius: 0.8rem;
+        border-color: rgb(105, 240, 105);
+        width: 110px;
+        height: 65px;
+        font-size: 12pt;
+        margin-left: 30px;
+        float: right;
+        margin-right: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    button.nav:hover {
+        background-color: rgb(105, 240, 105);
+        color: #02353c;
+        border-radius: 5px;
+        border-color: rgb(105, 240, 105);
+
+    }
+
+
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #background {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 2040px;
+        width: 100%;
+        min-height: 3750px;
+        height: 100%;
+        background: linear-gradient(to bottom, #02353c 0%, #02353c 60px, #02353c 60px, rgb(58, 138, 58) 100%);
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        /* Ensure it stays behind the content */
+
+    }
+
+    #background.extended {
+        min-height: 4050px;
+        height: 100%;
+    }
+
+    .resumetext {
+        position: absolute;
+        left: 120px;
+        top: 40px;
+        width: 500px;
+        font-family: "Courier";
+        font-size: 15pt;
+        color: #10e492;
+
+
+    }
+
+    #explanation {
+        position: absolute;
+        text-align: center;
+        left: 200px;
+        top: 110px;
+        width: 1400px;
+        font-size: 18pt;
+        font-family: 'Courier New', Courier, monospace;
+        color: greenyellow;
+
+    }
+
+    #resume {
+        position: absolute;
+        left: 590px;
+        top: 15px;
+        color: #10e492;
+        border-color: #10e492;
+    }
+
+    #resume:hover {
+        background-color: #10e492;
+        color: #02353c;
+    }
+
+    #projects {
+        position: absolute;
+        top: 15px;
+        left: 1600px;
+
+
+    }
+
+    .projects {
+        position: absolute;
+        left: 850px;
+        top: 20px;
+        font-family: "Courier";
+        font-size: 15pt;
+        color: rgb(11, 232, 11);
+        text-align: center;
+        width: 700px;
+    }
+
+    #text {
+
+        position: absolute;
+        top: 210px;
+        left: 150px;
+        width: 440px;
+        height: 3500px;
+
+    }
+
+    .read-more-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .read-more-btn {
+        font-family: "Tahoma";
+        font-size: 18pt;
+        color: #95AA15;
+        cursor: pointer;
+    }
+
+    .read-more-text {
+        display: none;
+    }
+
+    .read-more-text--show {
+        display: inline;
+    }
+
+    .subexp {
+        font-family: "Tahoma";
+        font-size: 28pt;
+        color: #95AA15;
+
+    }
+
+    .big {
+        font-family: "Courier";
+        color: rgb(11, 232, 11);
+        font-size: 20pt;
+    }
+
+    .preamble {
+        position: relative;
+        top: -100px;
+        font-family: "Courier";
+        color: rgb(11, 232, 11);
+        font-size: 18pt;
+        width: 1575px;
+
+    }
+
+    .role {
+        position: relative;
+        top: -80px;
+    }
+
+    .text {
+        position: relative;
+        top: -60px;
+        font-family: "Courier";
+        color: #10e492;
+        font-size: 19pt;
+        width: 1575px;
+    }
+
+    .link {
+        color: yellow;
+    }
+
+    .link:hover {
+        color: orange;
+    }
+
+    .bar {
+        height: 3px;
+        width: 1600px;
+        background-color: #95AA15;
+    }
+
+    #mtl1 {
+        position: relative;
+        top: -55px;
+        left: 600px;
+        font-size: 16pt;
+    }
+
+    #time1 {
+        position: relative;
+        top: -110px;
+        left: 1350px;
+    }
+
+    #mtl2 {
+        position: relative;
+        top: -55px;
+        left: 600px;
+        font-size: 16pt;
+    }
+
+    #time2 {
+        position: relative;
+        top: -110px;
+        left: 1350px;
+    }
+
+    #mtl3 {
+        position: relative;
+        top: -55px;
+        left: 600px;
+        font-size: 16pt;
+    }
+
+    #time3 {
+        position: relative;
+        top: -110px;
+        left: 1450px;
+    }
+
+    #tor1 {
+        position: relative;
+        top: -55px;
+        left: 600px;
+        font-size: 16pt;
+    }
+
+    #time4 {
+        position: relative;
+        top: -110px;
+        left: 1200px;
+    }
+
+    #zerobar {
+        position: relative;
+        left: 0px;
+    }
+
+    #firstbar {
+        position: relative;
+        left: 0px;
+
+    }
+
+    .role {
+        font-family: "Courier";
+        color: #10e492;
+        font-size: 18pt;
+    }
+
+    #secondbar {
+        position: relative;
+        left: 0px;
+
+    }
+
+
+
+    #recent0 {
+        position: relative;
+        top: 77px;
+        font-size: medium;
+        color: #10e492;
+    }
 }

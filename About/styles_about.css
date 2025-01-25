@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden;
+
 
 }
 
@@ -25,7 +25,7 @@ img.walkie {
 img.hill1 {
     position: absolute;
     top: 1105px;
-    right: 40px;
+    left: 1140px;
     height: 440px;
     width: 700px;
     border-radius: 100px;
@@ -52,7 +52,7 @@ img.radio_tower1 {
 img.radio_tower2 {
     position: absolute;
     top: 1040px;
-    right: 180px;
+    left: 1500px;
     height: 450px;
     width: 230px;
     transform: scaleX(-1) rotate(10deg);
@@ -61,13 +61,12 @@ img.radio_tower2 {
 img.hill1.shift {
     position: absolute;
     top: 1550px;
-    right: 20px;
+
 }
 
 img.hill2.shift {
     position: absolute;
     top: 1500px;
-    left: 110px;
 }
 
 img.radio_tower1.shift {
@@ -79,7 +78,7 @@ img.radio_tower1.shift {
 img.radio_tower2.shift {
     position: absolute;
     top: 1480px;
-    right: 160px;
+
 }
 
 img.profile_pic {
@@ -94,7 +93,7 @@ img.profile_pic {
 img.radio {
     position: absolute;
     top: 50px;
-    right: 30px;
+    left: 1400px;
     height: 500px;
     width: 500px;
 }
@@ -102,7 +101,7 @@ img.radio {
 img.radio_wave1 {
     position: absolute;
     top: -10px;
-    right: 430px;
+    left: 1420px;
     height: 120px;
     width: 80px;
     transform: rotate(260deg);
@@ -148,7 +147,7 @@ img.radio_wave2.visible {
 #presetty {
     position: relative;
     top: 5px;
-    font-family: Monospace;
+    font-family: Tahoma;
     color: #95AA15;
     font-size: 30pt;
 }
@@ -163,7 +162,7 @@ img.radio_wave2.visible {
 
 #changechannel {
     position: absolute;
-    right: 34%;
+    left: 1025px;
     top: 80px;
     text-align: center;
     width: 240px;
@@ -178,7 +177,7 @@ img.radio_wave2.visible {
 .dial {
     position: absolute;
     top: 200px;
-    right: 34%;
+    left: 1015px;
     height: 250px;
     width: 250px;
 }
@@ -309,7 +308,7 @@ button.preset:hover {
 
 .header {
     position: absolute;
-    font-family: monospace;
+    font-family: Tahoma;
     left: 750px;
     top: 0px;
     color: #95AA15;
@@ -320,7 +319,7 @@ button.preset:hover {
 .presetNumOne {
     position: absolute;
     top: 500px;
-    left: 8%;
+    left: 150px;
     height: 530px;
     width: 1000px;
     padding: 15px;
@@ -337,7 +336,7 @@ button.preset:hover {
 #name {
     position: relative;
     top: 20px;
-    font-family: Monospace;
+    font-family: Tahoma;
     color: #95AA15;
     font-size: 24pt;
 }
@@ -408,7 +407,7 @@ img.website_build {
 
 .presetNumTwo.visible {
     opacity: 1;
-    left: 10%;
+    left: 200px;
     top: 550px;
     z-index: 1;
 }
@@ -484,16 +483,17 @@ img.website_build {
 
 #mathphysics {
     position: relative;
+    top: -20px;
     left: 180px;
     width: 650px;
     font-size: 25pt;
-    font-family: Monospace;
+    font-family: Tahoma;
     color: rgb(58, 162, 197);
 }
 
 #theinterest {
     position: relative;
-    top: -550px;
+    top: -570px;
     left: 10px;
     width: 900px;
     font-size: 15pt;
@@ -503,7 +503,7 @@ img.website_build {
 
 #learned1 {
     position: relative;
-    top: -555px;
+    top: -585px;
     left: 10px;
     width: 900px;
     font-size: 15pt;
@@ -530,7 +530,7 @@ img.website_build {
 
 .presetNumThree.visible {
     opacity: 1;
-    left: 10%;
+    left: 200px;
     top: 550px;
     z-index: 1;
 }
@@ -596,7 +596,7 @@ img.website_build {
     top: -10px;
     width: 650px;
     font-size: 25pt;
-    font-family: Monospace;
+    font-family: Tahoma;
     color: rgb(245, 148, 137);
 }
 
@@ -639,13 +639,13 @@ img.website_build {
 
 .presetNumFour.visible {
     opacity: 1;
-    left: 10%;
+    left: 250px;
     top: 550px;
     z-index: 1;
 }
 
 #compsciAI {
-    font-family: Monospace;
+    font-family: Tahoma;
     position: relative;
     color: #badd7e;
     left: 400px;
@@ -746,7 +746,7 @@ img.website_build {
 
 .presetNumFive.visible {
     opacity: 1;
-    left: 10%;
+    left: 250px;
     top: 550px;
     z-index: 1;
 }
@@ -799,7 +799,7 @@ img.website_build {
 #HiParker {
     position: relative;
     left: 50px;
-    font-family: monospace;
+    font-family: Tahoma;
     font-size: 30pt;
     Color: rgba(54, 64, 100, 0.991);
 
@@ -822,7 +822,8 @@ img.logo {
     position: absolute;
     top: 0;
     left: 0;
-    height: 1615px;
+    min-height: 1615px;
+    height: 100%;
     width: 80px;
     background-color: rgba(0, 0, 0, 0.5);
     padding: .4rem .8rem;
@@ -832,7 +833,8 @@ img.logo {
 }
 
 .sidebar.long {
-    height: 2060px;
+    min-height: 2060px;
+    height: 100%;
 }
 
 .sidebar.active {
@@ -993,8 +995,10 @@ button.nav:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 2440px;
-    height: 1615px;
+    min-width: 2000px;
+    width: 100%;
+    min-height: 1615px;
+    height: 100%;
     overflow-y: auto;
     background: linear-gradient(#02353c, rgb(58, 138, 58));
     z-index: -1;
