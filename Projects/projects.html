@@ -90,8 +90,8 @@
                 <h2 class="subheader2"><i class="fa-solid fa-object-group"></i> Frontend Designs</h2>
                 <p class="writing2"><b>My Portfolio Website</b> <br> <br> This very website is my very first venture
                     into
-                    frontend
-                    development. Here, I try to optimize the user experience while putting my knowledge and skills
+                    frontend <br>
+                    development. Here, I try to optimize the user experience while putting <br> my knowledge and skills
                     on
                     display.</p>
                 <img class="home_page" src="../imagesDocs/home_page.png">
@@ -105,7 +105,7 @@
                 <p class="writing3">
                     <b>8-bit Minifloat Adder</b> <br> <br> Using VHDL, I
                     create a digital design capable
-                    of adding two floating point numbers <br>
+                    of adding two floating <br> point numbers
                     represented
                     in the
                     8-bit minifloat format.
@@ -120,7 +120,7 @@
                 <h2 class="subheader4"><i class="fa-solid fa-copy"></i> Papers</h2>
                 <p class="writing4"><b>Radiation Shielding Research Paper</b> <br> <br>In this paper, I research the
                     effectiveness of liquid hydrogen <br> and polyethylene
-                    as radiation shielding materials for conditions similar <br> to those present in moon missions.
+                    as radiation shielding materials for conditions <br> similar to those present in moon missions.
                 </p>
                 <img class="shielding_paper" src="../imagesDocs/shielding_paper.png">
                 <img class="typewriter" src="../imagesDocs/typewriter.png">
@@ -130,8 +130,14 @@
             </div>
             <div class="item">
                 <h2 class="subheader5"><i class="fa-solid fa-brain"></i> AI-Powered Programs</h2>
+                <p class="writing5"> <b>Image Classification using Neural Nets</b> <br> <br> In this project, I employ
+                    the use of several Neural Nets <br> to an interesting image classification task,
+                    inspired <br>by the MNIST classification problem. </p>
+                <img class="greyscale" src="../imagesDocs/qmnist.png">
                 <img class="ai" src="../imagesDocs/ai_brain2.png">
-                <h3 class="writing5"><b>Coming Soon!</b></h3>
+                <a href="./ML_projects/ml_projects.html">
+                    <button id="see_more5" class="nav">See More <i class="fa-solid fa-plus"></i> </button>
+                </a>
             </div>
         </div>
 
@@ -179,7 +185,7 @@
         let result = "content" + num;
         background.className = '';
         background.classList.add(result);
-
+        let sign = 0;
         reloadSlider();
     }
     //stuff for 'prev' button
@@ -193,15 +199,22 @@
         let result = "content" + num;
         background.className = '';
         background.classList.add(result);
-        reloadSlider();
+
+        let sign = 1;
+        reloadSlider(sign);
     }
 
-    let refreshSlider = setInterval(() => { next.click() }, 10000);
+    // let refreshSlider = setInterval(() => { next.click() }, 10000);
     //shift the items
-    function reloadSlider() {
+    function reloadSlider(sign) {
         let checkLeft = items[active].offsetLeft;
-        list.style.left = -checkLeft + 'px';
+        if (sign = 0) {
+            checkLeft -= 100;
+        } else if (sign = 1) {
+            checkLeft += 100;
+        }
 
+        list.style.left = -checkLeft + 'px';
         let lastActiveDot = document.querySelector('.slider .dots li.active');
         lastActiveDot.classList.remove('active');
         dots[active].classList.add('active');

@@ -13,6 +13,7 @@ img.logo {
     position: absolute;
     top: 0;
     left: 0;
+    min-height: 1000px;
     height: 100%;
     width: 80px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -182,7 +183,9 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    min-width: 2000px;
     width: 100%;
+    min-height: 1000px;
     height: 100%;
     background: linear-gradient(to bottom, #3f7976 0%, #0c1322 100%);
     z-index: -1;
@@ -195,7 +198,7 @@ body {
 #topbar {
     position: absolute;
     top: 0px;
-    width: 100%;
+    width: 2000px;
     background-color: rgba(3, 71, 77, 0.6);
     border-bottom: solid rgb(21, 142, 124);
     z-index: -1;
@@ -211,7 +214,7 @@ body {
 .radiation_paper {
     position: absolute;
     left: 90px;
-    top: 90px;
+    top: 110px;
     width: 500px;
     border: 2px groove #1a958f;
     border-radius: 5px;

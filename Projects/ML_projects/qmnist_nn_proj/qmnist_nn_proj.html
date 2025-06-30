@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Wyrstiuk - Portfolio Website - Projects > Programs > WorkoutLogC</title>
-    <link rel="stylesheet" href="workoutlogC_styles.css" />
+    <title>Alex Wyrstiuk - Portfolio Website - Projects > Papers > RadiationShielding</title>
+    <link rel="stylesheet" href="qmnist_nn_proj.css" />
     <script src="https://kit.fontawesome.com/6278deb041.js" crossorigin="anonymous"></script>
 </head>
 
@@ -44,6 +44,7 @@
                 <a href="../../../Projects/projects.html">
                     <i class="fa-solid fa-folder-open"></i>
                     <span class="sidebar-item"><b>Projects</b></span>
+
                 </a>
                 <span class="tooltip"><b>Projects</b></span>
             </li>
@@ -67,11 +68,15 @@
     <div id="background"></div>
 
     <div class="main">
-        <h1>Workout Log Program</h1>
-        <p id="dates">April 2024 - May 2024</p>
-        <img class="program" src="../../../imagesDocs/workout_program.png">
-        <img class="program1" src="../../../imagesDocs/workout_program1.png">
-        <img class="program2" src="../../../imagesDocs/workout_program2.png">
+        <h1>Comparing Multiple Neural Net Architectures <br> to Classify Noisy Greyscale Digits</h1>
+        <p id="dates">March 2025 - April 2025</p>
+        <img class="qmnist_mix" src="../../../imagesDocs/qmnist.png">
+        <img class="qmnist_results" src="../../../imagesDocs/qmnist_results.png">
+        <img class="accuracies" src="../../../imagesDocs/conv3_arch.png">
+    </div>
+
+    <div id="conv3_image_name">
+        <p id="conv3_dropout_name">CONV3_DROPOUT</p>
     </div>
 
     <div class="content">
@@ -79,71 +84,60 @@
         <div class="bar"></div>
         <ul class="list">
             <li>
-                <p class="item">Write an interactive program that allows you to create, store and edit notes about your
-                    workouts</p>
+                <p class="item">Become familiar with ordinary fully-connected, feed-forward neural nets</p>
             </li>
             <li>
-                <p class="item">Write the program in C</p>
+                <p class="item">Understand the fundamental differences between CNNs and ordinary NNs
+                </p>
             </li>
             <li>
-                <p class="item">Give it the theme of an old command-line user-interface</p>
+                <p class="item">Try various models, including LeNet-5 because of its history with the MNIST
+                    classification
+                    problem</p>
             </li>
             <li>
-                <p class="item">The program must interact with the file system</p>
+                <p class="item">Free to use the PyTorch Library to simplify the code</p>
             </li>
             <li>
-                <p class="item">Avoid using sophisticated libraries<br><br><br></p>
+                <p class="item">Classification Task: Identify the number from 1 to 9, among characters
+                    from unknown languages
+                </p>
+            </li>
+            <li>
+                <p class="item">Tamper with different neural net architectures
+                </p>
             </li>
         </ul>
         <h2 class="section">Methods/Features/Results</h2>
         <div class="bar"></div>
         <ul class="list">
             <li>
-                <p class="item">The workout notes are stored in CSV files with the following naming convention: <br>
-                    <br>
-                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(name of workout)(date in yyyy-mm-dd format).csv
-                </p>
+                <p class="item">Pre-Processing: brought the pixel values into the range [-1, +1]</p>
             </li>
             <li>
-                <p class="item">
-                    When the user is prompted to add or edit a workout, the existing and incoming workout information
-                    is loaded into a 'database' struct, effectively a dynamic array which stores each line of the CSV
-                    file.
-                </p>
+                <p class="item">Experimented with adding 50% dropout; helped some models and hurt others</p>
             </li>
             <li>
-                <p class="item">
-                    An entry in the
-                    workout log contains several fields: the exercise performed, the number of sets done with
-                    the
-                    specified exercise, the number of repetitions per set, the weight lifted on each repetition, any
-                    comments
-                    about the exercise, and a timestamp which indicates when the entry was made to the workout log.
-                </p>
+                <p class="item">Model trained on 95% of the dataset, tested on the remaining 5%</p>
             </li>
             <li>
-                <p class="item">
-                    The program has 6 commands: 'add', 'remove', 'update', 'list', 'save' and 'exit'.
-                </p>
-            </li>
-
-            <li>
-                <p class="item">
-                    Quite robust in the face of user input.
-                </p>
+                <p class="item">Should experiment with hyperparameter tuning methodologies such as grid search in the
+                    future</p>
             </li>
             <li>
-                <p class="item">
-                    Careful and appropriate use of dynamic memory allocation <br><br><br>
-                </p>
+                <p class="item">Although LeNet-5 performed well, it was beaten by a custom model of mine that used
+                    dropout</p>
+            </li>
+            <li>
+                <p class="item">Accuracy on validation set did not exceed 95% among the models experimented with</p>
+            </li>
+            <li>
+                <p class="item">This work is associated to a project submitted for the McGill course: ECSE 551</p>
             </li>
         </ul>
-
-        <a href="https://github.com/awyrst/WorkoutLog_C">
-            <h3>Check out my github repo to view the code and try the program for yourself! <i
-                    class="fa-brands fa-github"></i></h3>
+        <a href="https://github.com/awyrst/qmnist_typ_class_nn">
+            <h3>Check out my github repo to view more details! <i class="fa-brands fa-github"></i></h3>
         </a>
-    </div>
 </body>
 
 <script>

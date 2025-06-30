@@ -13,6 +13,7 @@ img.logo {
     position: absolute;
     top: 0;
     left: 0;
+    min-height: 1000px;
     height: 100%;
     width: 80px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -182,7 +183,9 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    min-width: 2000px;
     width: 100%;
+    min-height: 1000px;
     height: 100%;
     background: linear-gradient(to bottom, #02353c 0%, #02353c 60px, #02353c 60px, rgb(58, 138, 58) 100%);
     z-index: -1;
@@ -195,7 +198,7 @@ body {
 #topbar {
     position: absolute;
     top: 0px;
-    width: 100%;
+    width: 2000px;
     background-color: rgba(37, 51, 42, 0.4);
     border-bottom: solid rgba(90, 237, 95, 0.5);
     z-index: -1;

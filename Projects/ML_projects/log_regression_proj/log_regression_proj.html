@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Wyrstiuk - Portfolio Website - Projects > Programs > WorkoutLogC</title>
-    <link rel="stylesheet" href="workoutlogC_styles.css" />
+    <title>Alex Wyrstiuk - Portfolio Website - Projects > Papers > RadiationShielding</title>
+    <link rel="stylesheet" href="log_regression_proj.css" />
     <script src="https://kit.fontawesome.com/6278deb041.js" crossorigin="anonymous"></script>
 </head>
 
@@ -44,6 +44,7 @@
                 <a href="../../../Projects/projects.html">
                     <i class="fa-solid fa-folder-open"></i>
                     <span class="sidebar-item"><b>Projects</b></span>
+
                 </a>
                 <span class="tooltip"><b>Projects</b></span>
             </li>
@@ -67,11 +68,11 @@
     <div id="background"></div>
 
     <div class="main">
-        <h1>Workout Log Program</h1>
-        <p id="dates">April 2024 - May 2024</p>
-        <img class="program" src="../../../imagesDocs/workout_program.png">
-        <img class="program1" src="../../../imagesDocs/workout_program1.png">
-        <img class="program2" src="../../../imagesDocs/workout_program2.png">
+        <h1>Logistic Regression from scratch for binary classification on kidney disease and battery datasets</h1>
+        <p id="dates">January 2025 - February 2025</p>
+        <img class="CKD" src="../../../imagesDocs/CKD.png">
+        <img class="battery" src="../../../imagesDocs/battery.png">
+        <img class="accuracies" src="../../../imagesDocs/model_comparison_log_reg.png">
     </div>
 
     <div class="content">
@@ -79,71 +80,61 @@
         <div class="bar"></div>
         <ul class="list">
             <li>
-                <p class="item">Write an interactive program that allows you to create, store and edit notes about your
-                    workouts</p>
+                <p class="item">Become familiarized with classification problems in machine learning</p>
             </li>
             <li>
-                <p class="item">Write the program in C</p>
+                <p class="item">Build the model from scratch, ensuring a profound understanding of the architecture
+                </p>
             </li>
             <li>
-                <p class="item">Give it the theme of an old command-line user-interface</p>
+                <p class="item">Implement ten-fold cross-validation</p>
             </li>
             <li>
-                <p class="item">The program must interact with the file system</p>
+                <p class="item">Not allowed to use any libraries with addidional ML tools</p>
             </li>
             <li>
-                <p class="item">Avoid using sophisticated libraries<br><br><br></p>
+                <p class="item">First Classification Task: Batteries - defective or not?
+                </p>
+            </li>
+            <li>
+                <p class="item">Second Classification Task: Does the patient have chronic kidney disease (CKD) or
+                    not?</p>
             </li>
         </ul>
         <h2 class="section">Methods/Features/Results</h2>
         <div class="bar"></div>
         <ul class="list">
             <li>
-                <p class="item">The workout notes are stored in CSV files with the following naming convention: <br>
-                    <br>
-                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(name of workout)(date in yyyy-mm-dd format).csv
-                </p>
+                <p class="item">Normalized the values of the features in the dataset by z-score</p>
             </li>
             <li>
-                <p class="item">
-                    When the user is prompted to add or edit a workout, the existing and incoming workout information
-                    is loaded into a 'database' struct, effectively a dynamic array which stores each line of the CSV
-                    file.
-                </p>
+                <p class="item">Experimented with different learning rates, and decay</p>
             </li>
             <li>
-                <p class="item">
-                    An entry in the
-                    workout log contains several fields: the exercise performed, the number of sets done with
-                    the
-                    specified exercise, the number of repetitions per set, the weight lifted on each repetition, any
-                    comments
-                    about the exercise, and a timestamp which indicates when the entry was made to the workout log.
-                </p>
+                <p class="item">No test set - accuracies only compared with ten-fold cross-validation</p>
             </li>
             <li>
-                <p class="item">
-                    The program has 6 commands: 'add', 'remove', 'update', 'list', 'save' and 'exit'.
-                </p>
-            </li>
-
-            <li>
-                <p class="item">
-                    Quite robust in the face of user input.
-                </p>
+                <p class="item">Experimented with adding fictitious features via quadratic and cubic terms</p>
             </li>
             <li>
-                <p class="item">
-                    Careful and appropriate use of dynamic memory allocation <br><br><br>
-                </p>
+                <p class="item">Experimented with removing features that were measurably less significant</p>
+            </li>
+            <li>
+                <p class="item">Accuracy on cross-validation could not exceed 89% on the CKD
+                    dataset, and 70% on
+                    battery dataset</p>
+            </li>
+            <li>
+                <p class="item">Perhaps a more complex model with a nonlinear decision boundary may fare
+                    better<br></p>
+            </li>
+            <li>
+                <p class="item">This work is associated to a project submitted for the McGill course: ECSE 551</p>
             </li>
         </ul>
-
-        <a href="https://github.com/awyrst/WorkoutLog_C">
-            <h3>Check out my github repo to view the code and try the program for yourself! <i
-                    class="fa-brands fa-github"></i></h3>
+        <a href="https://github.com/awyrst/log_reg_scratch">
+            <h3>Check out my github repo to view more details! <i class="fa-brands fa-github"></i></h3>
         </a>
-    </div>
 </body>
 
 <script>
